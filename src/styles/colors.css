@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary Colors - mapped to design system */
+  --color-primary-50: var(--color-cream-50);
+  --color-primary-100: var(--color-cream-100);
+  --color-primary-200: var(--color-gray-200);
+  --color-primary-300: var(--color-gray-300);
+  --color-primary-400: var(--color-slate-500);
+  --color-primary-500: var(--color-slate-900);
+  --color-primary-600: var(--color-charcoal-700);
+  --color-primary-700: var(--color-charcoal-800);
+  --color-primary-800: var(--color-charcoal-800);
+  --color-primary-900: var(--color-charcoal-800);
+
+  /* Secondary Colors - mapped to design system */
+  --color-secondary-50: var(--color-cream-100);
+  --color-secondary-100: var(--color-cream-100);
+  --color-secondary-200: var(--color-cream-50);
+  --color-secondary-300: var(--color-cream-50);
+  --color-secondary-400: var(--color-cream-50);
+  --color-secondary-500: var(--color-cream-100);
+  --color-secondary-600: var(--color-secondary);
+  --color-secondary-700: var(--color-secondary);
+  --color-secondary-800: var(--color-secondary-hover);
+  --color-secondary-900: var(--color-secondary-active);
+
+  /* Accent Colors - mapped to design system teal */
+  --color-accent-50: rgba(var(--color-teal-500-rgb), 0.05);
+  --color-accent-100: rgba(var(--color-teal-500-rgb), 0.1);
+  --color-accent-200: rgba(var(--color-teal-500-rgb), 0.2);
+  --color-accent-300: rgba(var(--color-teal-500-rgb), 0.3);
+  --color-accent-400: rgba(var(--color-teal-500-rgb), 0.5);
+  --color-accent-500: var(--color-primary);
+  --color-accent-600: var(--color-primary-hover);
+  --color-accent-700: var(--color-primary-active);
+  --color-accent-800: var(--color-teal-700);
+  --color-accent-900: var(--color-teal-800);
+
+  /* Status Colors - use design system */
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-error: var(--color-red-500);
+  --color-info: var(--color-slate-500);
+
+  /* Neutral Colors - mapped to design system */
+  --color-neutral-gray: var(--color-text-secondary);
+  --color-neutral-light: var(--color-border);
+  --color-neutral-bg: var(--color-background);
+  --color-neutral-dark: var(--color-text);
+
+  /* Background Palettes - use design system backgrounds */
+  --color-bg-1: var(--color-bg-1);
+  --color-bg-2: var(--color-bg-2);
+  --color-bg-3: var(--color-bg-3);
+  --color-bg-4: var(--color-bg-4);
+  --color-bg-5: var(--color-bg-5);
+  --color-bg-6: var(--color-bg-6);
+  --color-bg-7: var(--color-bg-7);
+  --color-bg-8: var(--color-bg-8);
+
+  /* Gradients - updated with design system colors */
+  --gradient-primary: linear-gradient(135deg, var(--color-slate-900) 0%, var(--color-charcoal-700) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  --gradient-subtle: linear-gradient(135deg, var(--color-cream-50) 0%, var(--color-cream-100) 100%);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary-50: var(--color-charcoal-700);
+    --color-primary-100: var(--color-charcoal-800);
+    --color-primary-200: var(--color-slate-900);
+    --color-secondary-50: var(--color-charcoal-800);
+    --color-secondary-100: var(--color-charcoal-700);
+    --color-secondary-200: var(--color-charcoal-700);
+    --gradient-primary: linear-gradient(135deg, var(--color-charcoal-800) 0%, var(--color-charcoal-700) 100%);
+    --gradient-subtle: linear-gradient(135deg, var(--color-charcoal-800) 0%, var(--color-charcoal-700) 100%);
+  }
+}
+
+[data-color-scheme="dark"] {
+  --color-primary-50: var(--color-charcoal-700);
+  --color-primary-100: var(--color-charcoal-800);
+  --color-primary-200: var(--color-slate-900);
+  --color-secondary-50: var(--color-charcoal-800);
+  --color-secondary-100: var(--color-charcoal-700);
+  --color-secondary-200: var(--color-charcoal-700);
+  --gradient-primary: linear-gradient(135deg, var(--color-charcoal-800) 0%, var(--color-charcoal-700) 100%);
+  --gradient-subtle: linear-gradient(135deg, var(--color-charcoal-800) 0%, var(--color-charcoal-700) 100%);
+}
+
+/* Text color utilities */
+.text-primary {
+  color: var(--color-text);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-accent {
+  color: var(--color-primary);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+.text-info {
+  color: var(--color-info);
+}
+
+/* Background color utilities */
+.bg-primary {
+  background-color: var(--color-surface);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-primary);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+}
+
+.bg-info {
+  background-color: var(--color-info);
+}
+
+/* Border color utilities */
+.border-primary {
+  border-color: var(--color-border);
+}
+
+.border-accent {
+  border-color: var(--color-primary);
+}
+
+.border-success {
+  border-color: var(--color-success);
+}
+
+.border-error {
+  border-color: var(--color-error);
+}

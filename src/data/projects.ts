@@ -1,0 +1,58 @@
+// src/data/projects.ts
+import { Project } from '@/types/index'
+import { format } from 'date-fns'
+
+export const projects: Project[] = [
+  {
+    id: "smart-home-iot",
+    title: "Maison Connectée IoT",
+    slug: "smart-home-iot",
+    description: "Système domotique complet avec Serveur Home-assistant. Arduino(ESP32, ESP8266, SonOff)",
+    image: "/projects/iot-home.jpg",
+    technologies: ["Home-Assistant", "IoT", "MQTT", "Zigbee", "Arduino", "Node-RED"],
+    category: "iot",
+    status: "en-cours",
+    featured: true,
+    createdAt: new Date("2023-07-01"),
+    updatedAt: new Date("2023-07-01"),
+  },
+  {
+    id: "montage-ordinateur",
+    title: "Montage PC Gamings, Serveurs",
+    slug: "montage-pc",
+    description: "Assemblage d'ordinateurs Gamings, bureautique ou encore de serveurs de tout types.",
+    image: "/projects/pc-gaming.jpg",
+    technologies: ["Processeur", "Carte-Graphique", "Ram", "Alimentation", "Système Raid"],
+    category: "montage-pc",
+    status: "en-cours",
+    featured: true,
+    createdAt: new Date("2023-07-01"),
+    updatedAt: new Date("2023-07-01"),
+  },
+  {
+  id: "aurelia-esthetique",
+  title: "Aurelia Esthetique",
+  link: "http://82.65.202.204:3001",
+  description: "Site vitrine pour estheticienne, pour demande de RDV et infos.",
+  image: "/projects/aurelia-esthetique.jpg",
+  technologies: ["NextJS", "TailwindCSS", "React", "Type Script"],
+  category: "web-dev", 
+  status: "en-cours",              
+  featured: false,               
+  createdAt: new Date("2025-11-08"),
+  updatedAt: new Date(),
+},
+{
+  id: "pm-renovation",
+  title: "PM Renovation",
+  link: "http://82.65.202.204:3001",
+  description: "Site d'entreprise de rénovation, pour demande de devis ect...",
+  image: "/projects/pm-renovation.jpg",
+  technologies: ["NextJS", "TailwindCSS", "React", "Type Script"],
+  category: "web-dev", 
+  status: "en-cours",              
+  featured: false,               
+  createdAt: new Date("2025-11-08"),
+  updatedAt: new Date(),
+},
+]
