@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from '@/hooks/useForm'
-import { contactService } from '@/services/contact.service'
+import { contactService } from '@/types/contact.service'
 import { contactSchema } from '@/utils/validation'
 import Button from '@/components/ui/Button'
 import Input from '@/components/ui/Input'

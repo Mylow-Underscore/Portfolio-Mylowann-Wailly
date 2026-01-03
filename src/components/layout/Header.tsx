@@ -30,7 +30,7 @@ export default function Header() {
             <span className="font-display font-bold text-xl">Portfolio</span>
           </Link>
 
-          <div className="sm:hidden lg:flex items-center gap-8">
+          <div className="max-md:hidden md:flex items-center gap-8">
             {menuItems.map(item => (
               <Link
                 key={item.href}

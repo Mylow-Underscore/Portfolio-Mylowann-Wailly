@@ -1,8 +1,8 @@
 'use client'
 
 import FadeInSection from '@/components/animations/FadeInSection';
-import HeroSection from '@/components/sections/PortfolioSection'
-import { Container } from '@/components/ui/Container'
+import HeroSection from '@/components/sections/PortfolioSection';
+import { Container } from '@/components/ui/Container';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import Typography from '@/components/ui/Typography';
 import { projects } from '@/data/projects';

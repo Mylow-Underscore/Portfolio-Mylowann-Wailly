@@ -6,12 +6,14 @@ import Typography from "@/components/ui/Typography";
 export default function Home() {
   return (
     <div>
-      <video className="fixed z-0" autoPlay muted loop playsInline>
+      <video className="max-md:hidden md:flex fixed z-0" autoPlay muted loop playsInline>
         <source src="/hero-bg/hero-bg-3.mp4" type="video/mp4" />
       </video>
-      <Hero></Hero>
-      <PortfolioSection></PortfolioSection>
-      <HeroSection></HeroSection>
+      <div>
+        <Hero></Hero>
+        <PortfolioSection></PortfolioSection>
+        <HeroSection></HeroSection>
+      </div>
     </div>
   );
 }

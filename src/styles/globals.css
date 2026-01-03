@@ -164,6 +164,10 @@ main {
 
 /* Dark mode colors */
 @media (prefers-color-scheme: dark) {
+  .bg-primary-500{
+  background-color: rgba(26, 26, 26, 0.8);
+  }
+
   :root {
     /* RGB versions for opacity control (Dark Mode) */
     --color-gray-400-rgb: 119, 124, 124;
@@ -338,9 +342,7 @@ body {
   background-color: var(--color-bg-3);
 }
 
-.bg-primary-500{
-  background-color: rgba(26, 26, 26, 0.8);
-}
+
 
 *,
 *::before,

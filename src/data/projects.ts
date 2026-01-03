@@ -45,7 +45,7 @@ export const projects: Project[] = [
 {
   id: "pm-renovation",
   title: "PM Renovation",
-  link: "http://82.65.202.204:3001",
+  link: "https://pmrenovation.wailly-mylowann.fr",
   description: "Site d'entreprise de rénovation, pour demande de devis ect...",
   image: "/projects/pm-renovation.jpg",
   technologies: ["NextJS", "TailwindCSS", "React", "Type Script"],

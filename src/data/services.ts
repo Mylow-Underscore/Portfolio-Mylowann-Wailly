@@ -3,74 +3,59 @@ import { Service } from "@/types/service";
 export const services: Service[] = [
   {
     id: 1,
-    name: "Terrassement",
+    name: "Développement de site vitrine moderne",
     description:
-      "Travaux de terrassement et préparation de terrain pour tous vos projets",
+      "Création de sites vitrines performants avec Next.js et TailwindCSS, pensés pour mettre en valeur votre activité et optimiser votre présence en ligne.",
   },
   {
     id: 2,
-    name: "Maçonnerie",
+    name: "Applications web sur mesure",
     description:
-      "Maçonnerie générale et gros œuvre pour constructions et rénovations",
+      "Conception d’applications web full-stack (front + back) adaptées à vos besoins métiers : dashboards, outils internes, formulaires avancés, espaces clients, etc.",
   },
   {
     id: 3,
-    name: "Taille de pierres",
+    name: "Refonte et optimisation de site existant",
     description:
-      "Travail de taille de pierre pour façades et éléments de prestige",
+      "Modernisation de sites existants : amélioration des performances, du SEO, de l’accessibilité et de l’expérience utilisateur sans repartir de zéro.",
   },
   {
     id: 4,
-    name: "Couverture",
-    description: "Pose et réparation de toitures avec matériaux de qualité",
+    name: "Automatisation & projets IoT",
+    description:
+      "Mise en place de solutions IoT et d’automatisation (capteurs, microcontrôleurs, intégrations API) pour gagner du temps et fiabiliser vos processus.",
   },
   {
     id: 5,
-    name: "Isolation",
-    description: "Isolation thermique et acoustique pour votre confort",
+    name: "Support & dépannage informatique",
+    description:
+      "Assistance pour vos problèmes informatiques du quotidien : diagnostic, nettoyage, réinstallation, sauvegardes, configuration réseau et sécurité de base.",
   },
   {
     id: 6,
-    name: "Carrelage",
-    description: "Pose de carrelage intérieur et extérieur avec finitions soignées",
+    name: "Montage et conseil PC sur mesure",
+    description:
+      "Accompagnement dans le choix des composants et montage de PC adaptés à vos usages (gaming, bureautique, création de contenu), avec optimisation et tests.",
   },
   {
     id: 7,
-    name: "Piscine",
-    description: "Construction et installation de piscines",
+    name: "Intégration et maintenance de formulaires de contact",
+    description:
+      "Mise en place de formulaires de contact fiables et sécurisés (validation, anti-spam, envoi d’e-mails, gestion des messages) intégrés à votre site.",
   },
   {
     id: 8,
-    name: "Menuiserie",
-    description: "Portes, fenêtres et agencements menuisés",
-  },
-  {
-    id: 9,
-    name: "Peinture",
-    description: "Peinture intérieure et extérieure avec finition professionnelle",
-  },
-  {
-    id: 10,
-    name: "Revêtements",
-    description: "Installation de revêtements muraux et sols variés",
-  },
-  {
-    id: 11,
-    name: "Plomberie",
-    description: "Installations et réparations en plomberie sanitaire",
-  },
-  {
-    id: 12,
-    name: "Électricité",
-    description: "Travaux électriques conformes aux normes en vigueur",
+    name: "Accompagnement technique pour petites entreprises",
+    description:
+      "Conseil et suivi technique pour indépendants et petites structures : choix des outils, hébergement, nom de domaine, mises à jour et bonnes pratiques.",
   },
 ];
 
 export const companyInfo = {
   name: "PM Rénovation",
   description: "Votre spécialiste en travaux de rénovation depuis 2004",
-  address: "82 Route de Burie, 17100 LA CHAPELLE-DES-POTS",
-  phone: "05 46 97 76 47",
-  email: "contact@pmrenovation17.com",
-  founded: 2004,
+  address: "",
+  phone: "06 52 83 52 39",
+  email: "wailly.mylowann@hotmail.com",
+  founded: 2025,
 };
