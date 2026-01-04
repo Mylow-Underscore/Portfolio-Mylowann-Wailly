@@ -445,6 +445,7 @@ pre code {
 .btn--primary {
   background: var(--color-primary);
   color: var(--color-btn-primary-text);
+  cursor: pointer;
 }
 
 .btn--primary:hover {

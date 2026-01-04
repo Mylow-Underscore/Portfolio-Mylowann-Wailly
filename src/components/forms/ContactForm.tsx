@@ -86,9 +86,9 @@ export default function ContactForm() {
             name="service"
             value={form.values.service || ''}
             onChange={form.handleChange}
-            className="w-full px-4 py-2 border-2 border-neutral-light rounded-lg focus:border-accent-500"
+            className="w-full p-4 px-4 py-2 border-2 border-neutral-light rounded-lg bg-primary focus:border-accent-500"
           >
-            <option value="">-- Sélectionner --</option>
+            <option className='hover:bg-secondary' value="">-- Sélectionner --</option>
             <option value="web-dev">Développement Web</option>
             <option value="iot">IoT & Automatisation</option>
             <option value="informatique">Support Informatique</option>
@@ -131,7 +131,7 @@ export default function ContactForm() {
           type="submit"
           variant="gold"
           size="lg"
-          className="w-full"
+          className="btn--primary w-full"
           isLoading={form.loading}
           disabled={form.loading}
         >

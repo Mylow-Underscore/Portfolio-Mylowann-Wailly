@@ -80,7 +80,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Métadonnées */}
         <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-4">
           <span>
-            {format(project.updatedAt, 'MMM yyyy', { locale: fr })}
+            {format(project.createdAt, 'MMM yyyy', { locale: fr })}
           </span>
           {project.clientId && (
             <span>👤 Client #{project.clientId}</span>
