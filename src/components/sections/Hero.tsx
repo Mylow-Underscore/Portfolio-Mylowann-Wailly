@@ -19,7 +19,7 @@ export default function Hero() {
           </h1>
           <p className="text-xl text-neutral-100 mb-8">
             Depuis 2023, j'accompagne les particuliers et les professionnels
-            dans leurs projets informatique de Development web ou équipement matériels.
+            dans leurs projets informatique de Developpement web ou équipement matériels.
           </p>
           <div className="flex gap-4">
             <Link href="/devis">
