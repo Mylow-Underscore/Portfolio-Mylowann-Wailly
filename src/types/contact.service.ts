@@ -3,6 +3,9 @@ export const contactService = {
     name: string
     email: string
     message: string
+    sujet: string
+    phone: string
+    service: string
   }) {
     const res = await fetch('/api/contact', {
       method: 'POST',

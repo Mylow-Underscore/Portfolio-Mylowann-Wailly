@@ -153,7 +153,7 @@ export interface ContactMessage {
 export interface ContactFormData {
   name: string;
   email: string;
-  subject: string;
+  sujet: string;
   message: string;
   phone?: string;
   service?: ProjectCategory;

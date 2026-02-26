@@ -51,11 +51,3 @@ export const services: Service[] = [
   },
 ];
 
-export const companyInfo = {
-  name: "PM Rénovation",
-  description: "Votre spécialiste en travaux de rénovation depuis 2004",
-  address: "",
-  phone: "06 52 83 52 39",
-  email: "wailly.mylowann@hotmail.com",
-  founded: 2025,
-};
