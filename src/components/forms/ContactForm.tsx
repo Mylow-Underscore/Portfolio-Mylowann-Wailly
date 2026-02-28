@@ -118,6 +118,7 @@ export default function ContactForm() {
           Envoyer le message
         </Button>
       </form>
+      {status && <p className="text-green-500">{status}</p>}
     </Card>
   )
 }

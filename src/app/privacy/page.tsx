@@ -8,7 +8,7 @@ export default function PolitiqueConfidentialitePage() {
           Politique de confidentialité
         </h1>
         <p className="text-sm text-neutral-500">
-          Dernière mise à jour : 04/01/2026
+          Dernière mise à jour : 28/02/2026
         </p>
       </section>
 

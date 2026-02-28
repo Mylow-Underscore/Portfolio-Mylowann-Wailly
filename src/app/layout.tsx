@@ -35,20 +35,20 @@ export const metadata: Metadata = {
     'Next.js',
     'TypeScript',
   ],
-  authors: [{ name: 'Portfolio Dev' }],
-  creator: 'Portfolio Dev',
+  authors: [{ name: 'Mylowann Wailly' }],
+  creator: 'Mylowann Wailly',
   publisher: 'Portfolio Dev',
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://portfolio-dev.com',
+    url: 'https://wailly-mylowann.fr',
     siteName: 'Portfolio Dev',
-    title: 'Portfolio | Développeur Web & Spécialiste IoT',
+    title: 'Portfolio | Wylozz - Développeur Web & Spécialiste IoT',
     description: 'Services professionnels en développement web, IoT et support informatique',
     images: [
       {
-        url: 'https://portfolio-dev.com/og-image.jpg',
+        url: 'https://wailly-mylowann.fr/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Portfolio',
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Développeur Web & Spécialiste IoT',
+    title: 'Portfolio | Wylozz - Développeur Web & Spécialiste IoT',
     description: 'Services professionnels en développement web, IoT et support informatique',
-    creator: '@portfolio_dev',
+    creator: '@MylowannWailly',
   },
 }
 

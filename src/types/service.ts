@@ -4,11 +4,3 @@ export interface Service {
   description: string;
   icon?: string;
 }
-
-export type ServiceCategory =
-  | "terrassement"
-  | "maçonnerie"
-  | "couverture"
-  | "isolation"
-  | "carrelage"
-  | "menuiserie";

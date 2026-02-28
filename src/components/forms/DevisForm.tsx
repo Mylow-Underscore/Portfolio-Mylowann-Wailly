@@ -77,7 +77,7 @@ export default function DevisForm() {
             className="w-full p-4 px-4 py-2 border-2 border-neutral-light rounded-lg bg-primary focus:border-accent-500"
             label="Service"
             name="service"
-            options={services.map((s) => ({ value: s.id.toString(), label: s.name }))}
+            options={services.map((s) => ({ value: s.name.toString(), label: s.name }))}
             required
           />
         </div>

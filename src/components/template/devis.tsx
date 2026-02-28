@@ -22,48 +22,213 @@ interface DevisEmailProps {
 const DevisEmail: React.FC<DevisEmailProps> = ({ name, email, phone, service, description, budget }) => {
   
     return (
-      <Html>
-        <Head />
-        <Preview>Nouveau message de contact de {name}</Preview>
-        <Body style={styles.body}></Body>
-          <Container style={styles.container}>
-            <h1 style={styles.heading}>Nouveau message de devis</h1>
-            <p style={styles.paragraph}><strong>Nom:</strong> {name}</p>
-            <p style={styles.paragraph}><strong>Email:</strong> {email}</p>
-            {phone && <p style={styles.paragraph}><strong>Téléphone:</strong> {phone}</p>}
-            {service && <p style={styles.paragraph}><strong>Service:</strong> {service}</p>}
-            <p style={styles.paragraph}><strong>Description:</strong><br />{description}</p>
-            {budget && <p style={styles.paragraph}><strong>Budget:</strong> {budget}</p>}
-          </Container>
-      </Html>
-    );
-};
+      <html>
+        <head>
+          <meta content="width=device-width" name="viewport" />
+          <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+          <meta name="x-apple-disable-message-reformatting" />
+          <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+          <meta name="x-apple-disable-message-reformatting" />
+          <meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection" />
+        </head>
+        <Preview>Demande de devis {name}</Preview>
+        <body>
+          <div
+            style={{
+              display: "none",
+              overflow: "hidden",
+              lineHeight: "1px",
+              opacity: 0,
+              maxHeight: 0,
+              maxWidth: 0,
+            }}
+            data-skip-in-text="true"
+          >
+            Prise Contact
+            <div></div>
+          </div>
 
-const styles = {
-  body: {
-    backgroundColor: "#f9f9f9",
-    fontFamily: "Arial, sans-serif",
-    padding: "20px",
-  },
-  container: {
-    backgroundColor: "#ffffff",
-    borderRadius: "8px",
-    padding: "20px",
-    maxWidth: "600px",
-    margin: "0 auto",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-  },
-  heading: {
-    color: "#333333",
-    fontSize: "24px",
-    marginBottom: "20px",
-  },
-  paragraph: {
-    color: "#555555",
-    fontSize: "16px",
-    lineHeight: "1.5",
-    marginBottom: "10px",
-  },
+          <table
+            border={0}
+            width="100%"
+            cellPadding={0}
+            cellSpacing={0}
+            role="presentation"
+            align="center"
+          >
+            <tbody>
+              <tr>
+                <td>
+                  <table
+                    align="center"
+                    width="100%"
+                    border={0}
+                    cellPadding={0}
+                    cellSpacing={0}
+                    role="presentation"
+                    style={{
+                      fontFamily:
+                        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+                      fontSize: "1.0769230769230769em",
+                      minHeight: "100%",
+                      lineHeight: "155%",
+                      backgroundColor: "#ababab91",
+                    }}
+                  >
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table
+                            align="center"
+                            width="100%"
+                            border={0}
+                            cellPadding={0}
+                            cellSpacing={0}
+                            role="presentation"
+                            style={{
+                              width: "100%",
+                              paddingLeft: 0,
+                              paddingRight: 0,
+                              lineHeight: "155%",
+                              maxWidth: 600,
+                              fontFamily:
+                                "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+                            }}
+                          >
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <h1
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "2.25em",
+                                      lineHeight: "1.44em",
+                                      paddingTop: "0.389em",
+                                      fontWeight: 600,
+                                      textAlign: "center",
+                                    }}
+                                  >
+                                    <span>Nouvelle Prise de Contacte de {name}</span>
+                                  </h1>
+
+                                  <h3
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1.4em",
+                                      lineHeight: "1.08em",
+                                      paddingTop: "0.389em",
+                                      fontWeight: 600,
+                                      textAlign: "left",
+                                    }}
+                                  >
+                                    <span> </span>
+                                  </h3>
+
+                                  <h3
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1.4em",
+                                      lineHeight: "1.08em",
+                                      paddingTop: "0.389em",
+                                      fontWeight: 600,
+                                      textAlign: "center",
+                                    }}
+                                  >
+                                    <span>Informations</span>
+                                  </h3>
+
+                                  <p
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1em",
+                                      paddingTop: "0.5em",
+                                      paddingBottom: "0.5em",
+                                      textAlign: "left",
+                                    }}
+                                  >
+                                      <span>
+                                        <strong>Mail :</strong> {email}
+                                      </span>
+                                    <br />
+                                    {phone && (
+                                      <>
+                                        <span>
+                                          <strong>Téléphone:</strong> {phone}
+                                        </span>
+                                        <br />
+                                      </>
+                                    )}
+                                    {service && (
+                                      <span>
+                                        <strong>Service:</strong> {service}
+                                      </span>
+                                    )}
+                                    <br />
+                                    {budget && (
+                                      <span>
+                                        <strong>Budget:</strong> {budget}
+                                      </span>
+                                    )}
+                                  </p>
+
+                                  <h2
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1.8em",
+                                      lineHeight: "1.44em",
+                                      paddingTop: "0.389em",
+                                      fontWeight: 600,
+                                      textAlign: "center",
+                                    }}
+                                  >
+                                    <span>Description</span>
+                                    <br />
+                                    <span style={{ fontWeight: 400, fontSize: "1em" }}>{description}</span>
+                                  </h2>
+
+                                  <p
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1em",
+                                      paddingTop: "0.5em",
+                                      paddingBottom: "0.5em",
+                                    }}
+                                  >
+                                    <br />
+                                  </p>
+
+                                  <p
+                                    style={{
+                                      margin: 0,
+                                      padding: 0,
+                                      fontSize: "1em",
+                                      paddingTop: "0.5em",
+                                      paddingBottom: "0.5em",
+                                    }}
+                                  >
+                                    <br />
+                                  </p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </body>
+      </html>
+    );
 };
 
 export default DevisEmail;
