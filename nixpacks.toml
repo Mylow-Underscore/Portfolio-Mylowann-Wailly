@@ -1,6 +1,11 @@
-# nixpacks.toml
-buildImage = "ghcr.io/railwayapp/nixpacks:latest"
-
 [phases.setup]
-# Hash d’archive Nix qui contient Node 22.13.1 (compatible Prisma 7.2.0)
-nixpkgsArchive = "51ad838b03a05b1de6f9f2a0fffecee64a9788ee"
+nixPkgs = ["openssl"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npx prisma generate", "npm run build"]
+
+[start]
+cmd = "npx prisma migrate deploy && npm run start"

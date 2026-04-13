@@ -1,12 +1,15 @@
-import { prisma } from "@/database/db";
+// import { prisma } from "@/database/db";
 import { ReactElement } from "react";
 import { render } from "@react-email/render";
 
+import * as React from "react";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import ContactEmail from "@/components/template/contact";
+import { util } from "zod";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const utils = require("util");
 
 export async function POST(req: NextRequest) {
   try {
@@ -29,7 +32,7 @@ export async function POST(req: NextRequest) {
       from: "onboarding@resend.dev",
       to: 'portfolio@wailly-mylowann.fr',
       subject: `Nouveau message de ${name}`,
-      react: ContactEmail({ name, email, sujet, message, phone, service }),
+      react: utils.promisify(ContactEmail)({ name, email, sujet, message, phone, service }),
     });
 
     return NextResponse.json({ ok: true });
