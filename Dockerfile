@@ -9,7 +9,7 @@ COPY package*.json ./
 
 # Installer les dépendances (prod uniquement en production)
 RUN npm ci --omit=dev
-RUN npm audit fix --force
+RUN npm audit fix
 
 # Copier le reste du code
 COPY . .
