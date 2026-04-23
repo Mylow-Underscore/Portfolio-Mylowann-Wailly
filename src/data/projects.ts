@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     id: "montage-ordinateur",
     title: "Montage PC Gamings, Serveurs",
-    description: "Assemblage d'ordinateurs Gamings, bureautique ou encore de serveurs de tout types.",
+    description: "Assemblage ou réparation d'ordinateurs de Bureautique, Gamings ou encore de Serveurs de tout types.",
     image: "/projects/pc-gaming.jpg",
     technologies: ["Processeur", "Carte-Graphique", "Ram", "Alimentation", "Système Raid"],
     category: "montage-pc",
