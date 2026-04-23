@@ -8,8 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances (prod uniquement en production)
-RUN npm install
-RUN npm i baseline-browser-mapping@latest -D
+RUN npm ci --omit=dev
 RUN npm audit fix --force
 
 # Copier le reste du code
