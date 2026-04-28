@@ -47,7 +47,7 @@ export default function Home() {
                 className={`px-6 py-2 rounded-xl font-medium transition-all ${
                   selectedCategory === cat
                     ? 'bg-primary-500 text-white shadow-lg'
-                    : 'bg-gray-800 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-300 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {cat === 'all' ? 'Tous' : `${cat.replace('-', ' ').toUpperCase()} (${categories[cat as ProjectCategory]})`}

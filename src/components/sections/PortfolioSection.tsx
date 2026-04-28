@@ -32,7 +32,7 @@ export default function PortfolioPage() {
           <Typography variant='h2' className="text-5xl font-display font-bold text-primary-500 mb-4">
             Portfolio
           </Typography>
-          <Typography variant='body-base' className="text-lg text-neutral-gray max-w-2xl mx-auto">
+          <Typography variant='body-base' className="text-lg text-neutral-grey max-w-2xl mx-auto">
             Découvrez mes projets récents dans le développement web, l'IoT, l'informatique et le montage PC
           </Typography>
         </FadeInSection>
@@ -46,7 +46,7 @@ export default function PortfolioPage() {
                 className={`px-6 py-2 rounded-xl font-medium transition-all ${
                   selectedCategory === cat
                     ? 'bg-primary-500 text-white shadow-lg'
-                    : 'bg-gray-800 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-300 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {cat === 'all' ? 'Tous' : `${cat.replace('-', ' ').toUpperCase()} (${categories[cat as ProjectCategory]})`}

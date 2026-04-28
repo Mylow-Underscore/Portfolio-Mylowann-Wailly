@@ -13,7 +13,7 @@ export default function ContactPage() {
     <main className="flex-grow p-6 py-16">
       <Container>
         <h1 className="text-4xl font-bold mb-12 text-primary-700">
-          Nous Contacter
+          Me contacter
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -34,7 +34,7 @@ export default function ContactPage() {
                   href="mailto:wailly-mylowann@hotmail.com"
                   className="text-secondary-500 hover:text-secondary-600"
                 >
-                  <Typography variant="body-lg">wailly-mylowann@hotmail.com</Typography> 
+                  <Typography variant="body-lg">portfolio@wailly-mylowann.fr</Typography>
                 </a>
               </div>
               <div>

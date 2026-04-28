@@ -12,7 +12,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Palette Luxury Modern
         primary: {
           50: '#f9f8f7',
           100: '#f3f0ed',

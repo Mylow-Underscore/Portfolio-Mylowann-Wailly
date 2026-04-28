@@ -56,8 +56,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 0.4, ease: 'easeOut' }}
           >
-            <div className="absolute inset-0 bg-gradient-gold rounded-2xl opacity-20 blur-3xl" />
-            <div className="relative bg-secondary-400/10 rounded-2xl border border-accent-500/30 h-full flex items-center justify-center">
+            <div className="absolute bg-gradient-to-br from-gray-300 to-gray-900 inset-0 rounded-2xl opacity-30 blur-sm" />
+            <div className="relative rounded-2xl border border-accent-500/30 h-full flex items-center justify-center">
               <div className="text-center">
                 <motion.div
                   animate={{ y: [0, 12, 0] }}

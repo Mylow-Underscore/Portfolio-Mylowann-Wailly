@@ -16,6 +16,14 @@ main {
   animation: page-enter 0.6s ease-out;
 }
 
+.bg-primary-500{
+  background-color: rgba(216, 216, 216, 0.58);
+}
+
+.bgcard-primary-500{
+  background-color: rgba(216, 216, 216, 1);
+}
+
 :root {
   /* Primitive Color Tokens */
   --color-white: rgba(255, 255, 255, 1);
@@ -165,7 +173,10 @@ main {
 /* Dark mode colors */
 @media (prefers-color-scheme: dark) {
   .bg-primary-500{
-  background-color: rgba(26, 26, 26, 0.8);
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+  .bgcard-primary-500{
+    background-color: rgba(26, 26, 26, 1);
   }
 
   :root {
@@ -760,4 +771,16 @@ select.form-control {
 /* Dark mode specifics */
 [data-color-scheme="dark"] .btn--outline {
   border: 1px solid var(--color-border-secondary);
+}
+
+.visitcard .imgverso {
+  display: none;
+}
+
+.visitcard:hover .imgrecto {
+  display: none;
+}
+
+.visitcard:hover .imgverso {
+  display: block;
 }

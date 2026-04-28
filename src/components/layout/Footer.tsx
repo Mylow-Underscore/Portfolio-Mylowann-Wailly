@@ -21,6 +21,11 @@ export default function Footer() {
             <h3 className="font-display font-bold text-lg mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/" className="hover:text-accent-500 transition-colors">
+                  Accuei
+                </Link>
+              </li>
+              <li>
                 <Link href="/portfolio" className="hover:text-accent-500 transition-colors">
                   Portfolio
                 </Link>
@@ -31,13 +36,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-accent-500 transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="hover:text-accent-500 transition-colors">
-                  À propos
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-secondary-200 mb-4 md:mb-0">
-            © {currentYear} Mylowann Wailly. Tous droits réservés.
+            © {currentYear} Wyloz, Micro. Tous droits réservés.
           </p>
 
           <div className="flex items-center gap-6">
@@ -101,7 +101,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </Link>
             <Link
-              href="https://www.instagram.com/mylowann.w/"
+              href="https://www.instagram.com/wyloz._/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-200 hover:text-accent-500 transition-colors"
