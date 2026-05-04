@@ -2,13 +2,11 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { useSession, signOut } from 'next-auth/react'
 import Button from '@/components/ui/Button'
 import { GalleryVerticalEnd, Menu, X } from 'lucide-react'
 
 
 export default function Header() {
-  const { data: session } = useSession()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const menuItems = [
@@ -16,6 +14,7 @@ export default function Header() {
     { label: 'Portfolio', href: '/projects' },
     { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Visit card', href: '/visitcard' },
   ]
 
   return (
@@ -42,37 +41,6 @@ export default function Header() {
             ))}
           </div>
 
-          {/* <div className="sm:hidden lg:flex items-center gap-4">
-            {session ? (
-              <>
-                <Link href="/dashboard">
-                  <Button variant="ghost" size="sm">
-                    Dashboard
-                  </Button>
-                </Link>
-                <button
-                  onClick={() => signOut()}
-                  className="text-sm font-medium hover:text-accent-500 transition-colors"
-                >
-                  Déconnexion
-                </button>
-              </>
-            ) : (
-              <>
-                <Link href="/login">
-                  <Button variant="ghost" size="sm">
-                    Connexion
-                  </Button>
-                </Link>
-                <Link href="/register">
-                  <Button variant="gold" size="sm">
-                    S'inscrire
-                  </Button>
-                </Link>
-              </>
-            )}
-          </div> */}
-
           <Button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden"
@@ -94,31 +62,6 @@ export default function Header() {
               </Link>
             ))}
             <hr className="border-primary-400" />
-            {session ? (
-              <>
-                <Link href="/dashboard" className="block">
-                  Dashboard
-                </Link>
-                <Button
-                  onClick={() => {
-                    signOut()
-                    setIsMobileMenuOpen(false)
-                  }}
-                  className="block w-full text-left hover:text-accent-500"
-                >
-                  Déconnexion
-                </Button>
-              </>
-            ) : (
-              <>
-                <Link href="/login" className="block">
-                  Connexion
-                </Link>
-                <Link href="/register" className="block">
-                  S'inscrire
-                </Link>
-              </>
-            )}
           </div>
         )}
       </nav>

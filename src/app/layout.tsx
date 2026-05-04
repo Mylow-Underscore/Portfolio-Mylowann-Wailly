@@ -27,6 +27,12 @@ export const metadata: Metadata = {
   description:
     'Découvrez mon portfolio de projets en développement web, IoT, support informatique et montage PC. Services professionnels de qualité.',
   keywords: [
+    'portfolio',
+    'Mylowann Wailly',
+    'Mylowann',
+    'Mylow',
+    'Wailly',
+    'Wyloz',
     'développeur web',
     'IoT',
     'informatique',
@@ -75,13 +81,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="bg-secondary-400 text-primary-500 font-sans">
-        <Providers>
           <Header />
             <main className="min-h-screen">
               {children}
             </main>
           <Footer />
-        </Providers>
       </body>
     </html>
   )
