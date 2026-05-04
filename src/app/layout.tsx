@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from 'next/font/google'
-import { Providers } from '@/components/Providers'
 import Typography from "@/components/ui/Typography";
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -77,7 +76,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1a1a1a" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="bg-secondary-400 text-primary-500 font-sans">

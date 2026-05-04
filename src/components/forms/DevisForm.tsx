@@ -8,46 +8,48 @@ import Button from "@/components/ui/Button";
 import { services } from "@/data/services";
 import Card from "../ui/Card";
 
-type DevisFormData = {
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-  description: string;
-  budget: string;
-};
-
-const initialValues: DevisFormData = {
-  name: '',
-  email: '',
-  phone: '',
-  service: '',
-  description: '',
-  budget: '',
-}
+type SubmitStatus = "idle" | "loading" | "success" | "error";
 
 export default function DevisForm() {
-  const [status, setStatus] = useState<string | null>(null);
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [message, setMessage] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("Envoi...");
 
-    const formData = new FormData(e.currentTarget);
-    const res = await fetch("/api/devis", {
-      method: "POST",
-      body: formData,
-    });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    if (res.ok) {
-      setStatus("Demande de devis envoyée avec succès ✅");
-    } else {
-      setStatus("Erreur lors de l'envoi");
+    setStatus("loading");
+    setMessage("Envoi de la demande de devis...");
+
+    try {
+      const res = await fetch("/api/devis", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        setStatus("error");
+        setMessage(
+          data?.error || "Erreur lors de l'envoi de la demande de devis."
+        );
+        return;
+      }
+
+      setStatus("success");
+      setMessage("Demande de devis envoyée avec succès ✅");
+      form.reset();
+    } catch {
+      setStatus("error");
+      setMessage("Erreur réseau ou serveur.");
     }
   }
 
   return (
-    <Card variant="default" className="max-w-2xl mx-auto">
+    <Card variant="default" className="mx-auto max-w-2xl">
       <form onSubmit={handleSubmit} className="space-y-6">
         <Input
           label="Nom complet"
@@ -56,6 +58,7 @@ export default function DevisForm() {
           required
           placeholder="Votre nom"
         />
+
         <Input
           label="Email"
           type="email"
@@ -63,41 +66,76 @@ export default function DevisForm() {
           required
           placeholder="votre@email.com"
         />
+
         <Input
           label="Téléphone"
           type="tel"
           name="phone"
           placeholder="06 12 34 56 78"
         />
+
         <div>
-          <label className="block text-sm font-medium text-primary-500 mb-2">
+          <label
+            htmlFor="service"
+            className="mb-2 block text-sm font-medium text-primary-500"
+          >
             Service intéressé
           </label>
+
           <Select
-            className="w-full p-4 px-4 py-2 border-2 border-neutral-light rounded-lg bg-primary focus:border-accent-500"
+            id="service"
+            className="w-full rounded-lg border-2 border-neutral-light bg-primary px-4 py-2 focus:border-accent-500"
             label="Service"
             name="service"
-            options={services.map((s) => ({ value: s.name.toString(), label: s.name }))}
+            options={services.map((s) => ({
+              value: s.name.toString(),
+              label: s.name,
+            }))}
             required
           />
         </div>
+
         <Textarea
           label="Description du projet"
           name="description"
           placeholder="Décrivez votre projet..."
           required
         />
+
         <Input
           label="Budget estimé (optionnel)"
           type="text"
           name="budget"
           placeholder="Ex: 1500 EUR"
         />
-        <Button type="submit" variant="primary" size="lg" className="w-full">
-          Envoyer la demande de devis
+
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          className="w-full"
+          disabled={status === "loading"}
+        >
+          {status === "loading"
+            ? "Envoi..."
+            : "Envoyer la demande de devis"}
         </Button>
       </form>
-      {status && <p className="text-green-500">{status}</p>}
+
+      {status !== "idle" && (
+        <p
+          className={`mt-4 text-sm ${
+            status === "success"
+              ? "text-green-500"
+              : status === "error"
+              ? "text-red-500"
+              : "text-primary-500"
+          }`}
+          aria-live="polite"
+        >
+          {message}
+        </p>
+      )}
     </Card>
   );
 }
