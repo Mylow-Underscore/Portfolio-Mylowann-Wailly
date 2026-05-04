@@ -69,7 +69,14 @@ export async function POST(req: NextRequest) {
       to,
       replyTo: email, // pour pouvoir répondre directement au client
       subject: `Nouveau devis de ${name}`,
-      react: DevisEmail({ name, email, phone, service, description, budget }),
+      react: await DevisEmail({ 
+        name,
+        email,
+        phone,
+        service,
+        description,
+        budget
+      }),
     });
 
     if (error) {

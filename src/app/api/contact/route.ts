@@ -66,14 +66,14 @@ export async function POST(req: NextRequest) {
       to,
       replyTo: email,
       subject: `Nouveau message de ${name} - ${sujet}`,
-      react: ContactEmail({
-        name,
-        email,
-        sujet,
-        message,
-        phone,
-        service,
-      }),
+      react: await ContactEmail({
+          name,
+          email,
+          sujet,
+          message,
+          phone,
+          service,
+        }),
     });
 
     if (error) {
