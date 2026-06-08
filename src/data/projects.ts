@@ -27,6 +27,18 @@ export const projects: Project[] = [
     createdAt: new Date("2023-07-01"),
     updatedAt: new Date(),
   },
+  {
+    id: "isolationn-combles-11",
+    title: "Isolation des Combles",
+    description: "Travail d'isolation des combles pour améliorer l'efficacité énergétique.",
+    image: "/projects/isolation-combles-11.png",
+    technologies: ["Isolation", "Materiaux", "Techniques de Construction"],
+    category: "web-dev",
+    status: "en-cours",
+    featured: true,
+    createdAt: new Date("2026-06-06"),
+    updatedAt: new Date(),
+  },
 //   {
 //   id: "aurelia-esthetique",
 //   title: "Aurelia Esthetique",
