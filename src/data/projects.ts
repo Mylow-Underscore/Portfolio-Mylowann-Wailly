@@ -29,6 +29,7 @@ export const projects: Project[] = [
   },
   {
     id: "isolationn-combles-11",
+    link: "https://isolation-comble-11.wailly-mylowann.fr",
     title: "Isolation des Combles",
     description: "Travail d'isolation des combles pour améliorer l'efficacité énergétique.",
     image: "/projects/isolation-combles-11.png",
