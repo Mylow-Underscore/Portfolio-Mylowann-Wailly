@@ -17,6 +17,13 @@ COPY . .
 # Variable d'environnement
 ENV PORT=3101
 
+#Email
+ENV EMAIL_USER="portfolio@wailly-mylowann.fr"
+ENV EMAIL_PASS="Mylow@nn1236"
+ENV EMAIL_RECEIVER="wailly.mylowann@hotmail.fr"
+ENV RESEND_API_KEY="re_i2EZ341m_Jj3sQJdtSmXnZ1hT7tBy5UYD"
+ENV EMAIL_FROM="onboarding@resend.dev"
+
 #création du dossier uploads
 RUN npm run build
 
