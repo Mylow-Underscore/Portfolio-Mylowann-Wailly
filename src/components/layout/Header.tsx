@@ -11,10 +11,9 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Accueil', href: '/' },
-    { label: 'Portfolio', href: '/projects' },
-    { label: 'Services', href: '/services' },
+    { label: 'Portfolio', href: '/projets' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Visit card', href: '/visitcard' },
+    { label: 'Carte de visite', href: '/carte-de-visite' },
   ]
 
   return (
@@ -22,11 +21,7 @@ export default function Header() {
       <nav className="z-50 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="z-50 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center">
-              <span className="font-bold text-primary-500"></span>
-            </div>
-            <GalleryVerticalEnd size={20} />
-            <span className="font-display font-bold text-xl">Portfolio</span>
+            <span className="font-display font-bold text-xl">Wyloz Buisness</span>
           </Link>
 
           <div className="max-md:hidden md:flex items-center gap-8">

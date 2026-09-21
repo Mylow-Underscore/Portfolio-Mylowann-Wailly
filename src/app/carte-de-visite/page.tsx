@@ -24,7 +24,7 @@ export default function VisitCardPage() {
                     }}
                     transition={{ duration: 8, repeat: Infinity}}
                 >
-                    <VisitCard className="visitcard w-80 h-96">
+                    <VisitCard className="cursor-pointer visitcard w-80 h-96">
                         <img
                             src="/card/verso.png"
                             alt="Verso de la carte de visite"

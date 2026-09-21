@@ -1,6 +1,7 @@
 'use client'
 
 import { Container } from "@/components/ui/Container";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -9,18 +10,13 @@ import Typography from "../ui/Typography";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen text-secondary-400 overflow-hidden flex items-center bg-primary-500 z-1">
-      
-        
+    <section className="relative h-screen min-h-screen text-secondary-400 overflow-hidden flex items-center content-center bg-primary-500 z-1">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl">
+          
           <h1 className="text-5xl font-bold mb-6">
-            Wailly Mylowann - Informaticien / Developpeur
+            Wailly Mylowann - Developpeur | Informaticien
           </h1>
-          <p className="text-xl text-neutral-100 mb-8">
-            Depuis 2023, j'accompagne les particuliers et les professionnels
-            dans leurs projets informatique de Developpement web ou équipement matériels.
-          </p>
           <div className="flex gap-4">
             <Link href="/devis">
               <Button variant="secondary" size="lg" className="hover:bg-accent hover:cursor-pointer">
@@ -34,9 +30,9 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        
+      </div>
         <motion.div
-          className="absolute left-1/2 -translate-x-1/2 translate-y-2/3 z-10"
+          className="absolute left-1/2 -translate-x-1/2 bottom-25 z-10"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -47,7 +43,6 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </div>
     </section> 
   );
 }

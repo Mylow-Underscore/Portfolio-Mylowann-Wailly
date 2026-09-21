@@ -15,6 +15,7 @@ interface AnimatedCardProps {
   enableParallax?: boolean;
 }
 
+
 function AnimatedCard({
   children,
   className = '',

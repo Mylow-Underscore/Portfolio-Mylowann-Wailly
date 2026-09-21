@@ -22,17 +22,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="hover:text-accent-500 transition-colors">
-                  Accuei
+                  Accueil
                 </Link>
               </li>
               <li>
                 <Link href="/portfolio" className="hover:text-accent-500 transition-colors">
                   Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-accent-500 transition-colors">
-                  Services
                 </Link>
               </li>
               <li>
@@ -46,8 +41,8 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li>Web Development</li>
-              <li>IoT Solutions</li>
+              <li>Développement Web</li>
+              <li>Solutions IoT</li>
               <li>Support IT</li>
               <li>Montage PC</li>
             </ul>
@@ -70,7 +65,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent-500 mt-0.5" />
-                <span>France</span>
+                <span>Toulouse, France</span>
               </li>
             </ul>
           </div>
@@ -80,7 +75,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-secondary-200 mb-4 md:mb-0">
-            © {currentYear} Wyloz, Micro. Tous droits réservés.
+            © {currentYear} Wyloz Buisness, SASU. Tous droits réservés.
           </p>
 
           <div className="flex items-center gap-6">
@@ -112,11 +107,11 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div className="flex items-center gap-4 text-sm mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-accent-500 transition-colors">
+            <Link href="/Confidentialite" className="hover:text-accent-500 transition-colors">
               Confidentialité
             </Link>
             <span className="text-secondary-300">|</span>
-            <Link href="/terms" className="hover:text-accent-500 transition-colors">
+            <Link href="/Conditions" className="hover:text-accent-500 transition-colors">
               Conditions
             </Link>
           </div>
