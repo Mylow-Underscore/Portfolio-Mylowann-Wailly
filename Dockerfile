@@ -14,42 +14,13 @@ RUN npm i baseline-browser-mapping@latest -D
 # Copier le reste du code
 COPY . .
 
-RUN npx prisma generate
-
 # Variable d'environnement
-ENV PORT=3103
+ENV PORT=3101
 
 #création du dossier uploads
 RUN npm run build
 
-EXPOSE 3103
-
-# Commande de démarrage
-CMD ["npm", "run", "start"]
-
-# Image de base (Node LTS, légère)
-FROM node:22
-
-# Dossier de travail dans le container
-WORKDIR /app
-
-# Copier uniquement les fichiers de dépendances d’abord (meilleur cache)
-COPY package*.json ./
-
-# Installer les dépendances (prod uniquement en production)
-RUN npm ci --omit=dev
-RUN npm i baseline-browser-mapping@latest -D
-
-# Copier le reste du code
-COPY . .
-
-
-
-#création du dossier uploads
-RUN npm run build
-
-# Exposer le port de ton app (adapter si besoin)
-EXPOSE 3001
+EXPOSE 3101
 
 # Commande de démarrage
 CMD ["npm", "run", "start"]
