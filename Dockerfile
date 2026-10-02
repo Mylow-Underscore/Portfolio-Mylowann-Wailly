@@ -10,9 +10,9 @@ RUN npm i baseline-browser-mapping@latest -D
 
 # Copier le reste du code
 COPY . .
-ENV PORT=3101
+ENV PORT=3001
 # Création du dossier uploads
 RUN npm run build
-EXPOSE 3101
+EXPOSE 3001
 # Commite de démarrage
 CMD ["npm", "run", "start"]
