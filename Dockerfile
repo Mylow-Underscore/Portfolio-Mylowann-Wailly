@@ -13,7 +13,6 @@ COPY . .
 ENV PORT=3001
 # Création du dossier uploads
 RUN npm run build
-RUN next-sitemap
 EXPOSE 3001
 # Commite de démarrage
 CMD ["npm", "run", "start"]
