@@ -1,6 +1,5 @@
 import { Container } from "@/components/ui/Container";
 import ContactForm from "@/components/forms/ContactForm";
-import { Link } from "lucide-react";
 import Typography from "@/components/ui/Typography";
 
 export const metadata = {
@@ -40,9 +39,9 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-neutral-100">Horaires d’ouverture</h2>
                 <ul className="text-lg space-y-2">
-                  <li><strong>Lundi – Vendredi :</strong> 8h – 18h</li>
-                  <li><strong>Samedi :</strong> 9h – 12h</li>
-                  <li><strong>Dimanche :</strong> Fermé</li>
+                  <li><strong className="text-primary-700">Lundi – Vendredi :</strong> 8h – 18h</li>
+                  <li><strong className="text-primary-700">Samedi :</strong> 9h – 12h</li>
+                  <li><strong className="text-primary-700">Dimanche :</strong> Fermé</li>
                 </ul>
               </div>
             </div>

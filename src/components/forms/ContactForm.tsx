@@ -5,6 +5,7 @@ import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Card from '@/components/ui/Card';
 import { Select } from '@/components/ui/Select';
+import { contactSchema } from '@/types/form';
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -17,6 +18,7 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
     setStatus('loading');
     setMessage('Envoi en cours...');
@@ -27,11 +29,11 @@ export default function ContactForm() {
         body: formData,
       });
 
-      const data = await res.json().catch(() => null);
+      const result = await res.json().catch(() => null);
 
       if (!res.ok) {
         setStatus('error');
-        setMessage(data?.error || "Erreur lors de l'envoi.");
+        setMessage(result?.error || "Erreur lors de l'envoi.");
         return;
       }
 
@@ -46,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <Card variant="default" className="mx-auto max-w-2xl">
-      <form name="contact" onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Input label="Nom complet" name="name" required />
           <Input label="Email" name="email" type="email" required />
