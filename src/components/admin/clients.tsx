@@ -110,7 +110,7 @@ export const Clients = () => {
 
       setNewCode(d.code);
       setNewMDP(d.mot_de_passe);
-      setForm({ nom: "", prenom: "", tel: "", email: "", raison_Sociale: "", siret: "", mot_de_passe: ""});
+      setForm({ nom: "", prenom: "", tel: "", email: "", raison_Sociale: "", siret: ""});
       fetchData();
     } catch {
       setFormError("Erreur serveur.");

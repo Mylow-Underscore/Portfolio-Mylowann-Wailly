@@ -16,9 +16,6 @@ COPY . .
 
 RUN npx prisma generate
 
-# Variable d'environnement
-ENV PORT=3001
-
 # Création du dossier uploads
 RUN npm run build
 EXPOSE 3001

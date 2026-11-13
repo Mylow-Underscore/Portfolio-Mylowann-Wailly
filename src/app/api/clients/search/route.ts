@@ -42,20 +42,9 @@ export async function GET(req: NextRequest) {
       take: parseLimit(req.nextUrl.searchParams.get("limit")),
     });
 
-    const logs_points_fidelite = await prisma.logs_Points_Fidelite.findMany({
-      where: {
-        OR: [
-          { clientCode: { contains: query } },
-          { description: { contains: query } },
-        ],
-      },
-      orderBy: { createdAt: "desc" },
-      take: parseLimit(req.nextUrl.searchParams.get("limit")),
-    });
-
+    
     return NextResponse.json({
       query,
-      logs_points_fidelite,
       clients: clients.map((client) => ({
         id: client.id,
         code: client.code_Reference,

@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Disallow: private
+
+# Host
+Host: https://wailly-mylowann.fr
+
+# Sitemaps
+Sitemap: https://wailly-mylowann.fr/sitemap.xml
