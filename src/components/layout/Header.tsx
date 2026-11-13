@@ -13,7 +13,7 @@ export default function Header() {
     { label: 'Accueil', href: '/' },
     { label: 'Portfolio', href: '/projets' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Carte de visite', href: '/carte-de-visite' },
+    { label: 'Login', href: '/login' },
   ]
 
   return (

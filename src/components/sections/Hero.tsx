@@ -10,9 +10,9 @@ import Typography from "../ui/Typography";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-screen text-secondary-400 overflow-hidden flex items-center content-center bg-primary-500 z-1">
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-3xl">
+    <section className="relative bg-primary-500 text-secondary-400 min-h-screen flex items-center justify-left px-6 py-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:max-w-6xl">
+        <div className="">
           
           <h1 className="text-5xl font-bold mb-6">
             Wailly Mylowann - Developpeur | Informaticien

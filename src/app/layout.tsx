@@ -8,7 +8,6 @@ import '@/styles/animations.css'
 import '@/styles/typography.css'
 import '@/styles/colors.css'
 
-
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -22,16 +21,20 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Développeur Web & Spécialiste IoT',
+  title: 'Wyloz Buisness | Wailly Mylowann ; Développeur Web',
   description:
-    'Découvrez mon portfolio de projets en développement web, IoT, support informatique et montage PC. Services professionnels de qualité.',
+    'Découvrez le portfolio de Mylowann Wailly | Wyloz Buisness. Spécialiste en développement Web et référencement SEO, montage PC et solutions Smart Home IoT.',
   keywords: [
-    'portfolio',
+    'Wailly Mylowann',
     'Mylowann Wailly',
+    'Wailly',
     'Mylowann',
     'Mylow',
-    'Wailly',
     'Wyloz',
+    'Wyloz Buisness',
+    'Developpeur Web Aude',
+    'Developpeur Montagne Noir',
+    'wailly-mylowann.fr',
     'développeur web',
     'IoT',
     'informatique',
@@ -42,14 +45,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mylowann Wailly' }],
   creator: 'Mylowann Wailly',
-  publisher: 'Portfolio Dev',
+  publisher: 'Wyloz Buisness',
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://wailly-mylowann.fr',
     siteName: 'Portfolio Dev',
-    title: 'Portfolio | Wylozz - Développeur Web & Spécialiste IoT',
+    title: 'Mylowann Wailly | Portfolio - Developpeur Web & Spécialiste IoT',
     description: 'Services professionnels en développement web, IoT et support informatique',
     images: [
       {
@@ -62,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Wylozz - Développeur Web & Spécialiste IoT',
+    title: 'Mylowann Wailly | Portfolio - Developpeur Web & Spécialiste IoT',
     description: 'Services professionnels en développement web, IoT et support informatique',
     creator: '@MylowannWailly',
   },
@@ -70,7 +73,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable}`} data-scroll-behavior="smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

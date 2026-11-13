@@ -1,10 +1,12 @@
 import { Container } from "@/components/ui/Container";
 import ContactForm from "@/components/forms/ContactForm";
 import Typography from "@/components/ui/Typography";
+import CustomLink from "@/components/ui/Link";
 
 export const metadata = {
-  title: "Contact - Mylowann Wailly",
-  description: "Contactez Mylowann Wailly pour vos demandes",
+  title: "Contactez-Nous | Wyloz Buisness",
+  description: "Contactez Wyloz Buisness) pour vos projets de développement Web, Smart Home IoT ou montage PC.",
+  keywords: ["Wailly Mylowann", "Mylowann Wailly", "Wyloz", "Contact Mylowann"],
 };
 
 export default function ContactPage() {
@@ -20,21 +22,15 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold text-primary-700">Téléphone</h3>
-                <a
-                  href="tel:0652825239"
-                  className="text-secondary-500 hover:text-secondary-600"
-                >
-                  <Typography variant="body-lg">06 52 82 52 39</Typography>
-                </a>
+                <CustomLink href="tel:0652825239">
+                  06 52 82 52 39
+                </CustomLink>
               </div>
               <div>
                 <h3 className="font-semibold text-primary-700">Email</h3>
-                <a
-                  href="mailto:wailly-mylowann@hotmail.com"
-                  className="text-secondary-500 hover:text-secondary-600"
-                >
-                  <Typography variant="body-lg">portfolio@wailly-mylowann.fr</Typography>
-                </a>
+                <CustomLink href="mailto:wailly-mylowann@hotmail.com">
+                  portfolio@wailly-mylowann.fr
+                </CustomLink>
               </div>
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-neutral-100">Horaires d’ouverture</h2>

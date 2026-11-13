@@ -2,8 +2,9 @@ import { Container } from "@/components/ui/Container";
 import DevisForm from "@/components/forms/DevisForm";
 
 export const metadata = {
-  title: "Demander un Devis - PM Rénovation",
-  description: "Demandez gratuitement un devis pour vos travaux",
+  title: "Demander un Devis | Wyloz Buisness",
+  description: "Obtenez un devis gratuit pour vos projets de développement Web, Smart Home IoT ou montage PC avec Wyloz Buisness.",
+  keywords: ["Wailly Mylowann", "Mylowann Wailly", "Wyloz", "Devis Gratuit", "Développeur Web", "Montage PC"],
 };
 
 export default function DevisPage() {

@@ -1,11 +1,15 @@
-import HeroSection from '@/components/sections/PortfolioSection';
-import { Container } from '@/components/ui/Container';
-import Typography from "@/components/ui/Typography";
+import type { Metadata } from 'next'
 
-export default function SmartHomeIoT() {
+export const metadata: Metadata = {
+  title: 'Smart Home IoT | Wyloz Buisness',
+  description: 'Solutions Domotiques intelligentes par Wyloz Buisness.',
+  keywords: ['Wailly Mylowann', 'Mylowann Wailly', 'Wyloz', 'Smart Home', 'IoT', 'domotique'],
+}
+
+export default function SmartHomeIoTPage() {
   return (
-    <Container>
-      <Typography variant="body-sm">Test</Typography>
-    </Container>
-  );
+    <main>
+      {/* Content to be updated */}
+    </main>
+  )
 }

@@ -33,7 +33,7 @@ export default function PortfolioPage() {
             Portfolio
           </Typography>
           <Typography variant='body-base' className="text-lg text-neutral-grey max-w-2xl mx-auto">
-            Découvrez mes projets récents dans le développement web, l'IoT, l'informatique et le montage PC
+            Découvrez mes projets récents dans le développement web, l&apos;IoT, l&apos;informatique et le montage PC
           </Typography>
         </FadeInSection>
 

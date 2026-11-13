@@ -19,7 +19,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: 'easeOut' }}
             >
-              Développeur Web & <span className="text-accent-500">Spécialiste IoT</span>
+              Développeur Web & <span className="text-accent-500">UX/UI</span>
             </motion.h1>
 
             <motion.p

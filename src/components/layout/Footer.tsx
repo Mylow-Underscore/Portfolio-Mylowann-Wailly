@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import CustomLink from '@/components/ui/Link';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react'
 
 export default function Footer() {
@@ -21,19 +21,19 @@ export default function Footer() {
             <h3 className="font-display font-bold text-lg mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-accent-500 transition-colors">
+                <CustomLink href="/">
                   Accueil
-                </Link>
+                </CustomLink>
               </li>
               <li>
-                <Link href="/portfolio" className="hover:text-accent-500 transition-colors">
+                <CustomLink href="/portfolio">
                   Portfolio
-                </Link>
+                </CustomLink>
               </li>
               <li>
-                <Link href="/about" className="hover:text-accent-500 transition-colors">
+                <CustomLink href="/about">
                   Contact
-                </Link>
+                </CustomLink>
               </li>
             </ul>
           </div>
@@ -53,15 +53,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-accent-500" />
-                <a href="mailto:wailly.mylowann@hotmail.com" className="hover:text-accent-500">
+                <CustomLink href="mailto:wailly.mylowann@hotmail.com">
                   wailly.mylowann@hotmail.com
-                </a>
+                </CustomLink>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-accent-500" />
-                <a href="tel:+33652835239" className="hover:text-accent-500">
+                <CustomLink href="tel:+33652835239">
                   +33 6 52 83 52 39
-                </a>
+                </CustomLink>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-accent-500 mt-0.5" />
@@ -79,41 +79,32 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            <Link
+            <CustomLink
               href="https://github.com/Mylow-Underscore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary-200 hover:text-accent-500 transition-colors"
             >
               <Github size={20} />
-            </Link>
-            <Link
+            </CustomLink>
+            <CustomLink
               href="https://www.linkedin.com/in/mylowann-wailly-8b57a3241/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary-200 hover:text-accent-500 transition-colors"
             >
               <Linkedin size={20} />
-            </Link>
-            <Link
+            </CustomLink>
+            <CustomLink
               href="https://www.instagram.com/wyloz._/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary-200 hover:text-accent-500 transition-colors"
             >
               <Instagram size={20} />
-            </Link>
+            </CustomLink>
           </div>
 
           {/* Legal Links */}
           <div className="flex items-center gap-4 text-sm mt-4 md:mt-0">
-            <Link href="/Confidentialite" className="hover:text-accent-500 transition-colors">
+            <CustomLink href="/Confidentialite">
               Confidentialité
-            </Link>
+            </CustomLink>
             <span className="text-secondary-300">|</span>
-            <Link href="/Conditions" className="hover:text-accent-500 transition-colors">
+            <CustomLink href="/Conditions">
               Conditions
-            </Link>
+            </CustomLink>
           </div>
         </div>
       </div>

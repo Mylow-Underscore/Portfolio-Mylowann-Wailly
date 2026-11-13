@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import CustomLink from '@/components/ui/Link'
 import { Typography } from '@/components/ui/Typography'
 import { Project } from '@/types/index'
 import { format } from 'date-fns'
@@ -31,10 +31,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Image
             src={project.image}
             alt={project.title}
-            fill
+            loading="eager"
+            sizes="( max-width: 768px ) 100vw, ( max-width: 1200px ) 50vw, 33vw"
             className="object-cover"
+            fill
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
 
         {/* Catégorie */}
@@ -87,13 +89,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
 
-        <Link href={`/portfolio/${project.slug}`} className="group block">
+        <CustomLink href={`/portfolio/${project.slug}`}>
           {project.slug && (
             <Typography variant='body-sm' className='text-primary'>Voir Le Projets en détails</Typography>
           )}
-        </Link>
+        </CustomLink>
 
-        <Link href={`${project.link}`} target="_blank" className="group block">
+        <CustomLink href={`${project.link}`}>
           {project.link && (
             <div className="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
               <span className="text-sm font-medium text-primary-500 hover:underline flex-1 truncate">
@@ -101,7 +103,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </span>
             </div>
           )}
-        </Link>
+        </CustomLink>
       </div>
   )
 }

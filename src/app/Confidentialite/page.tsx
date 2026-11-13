@@ -1,3 +1,4 @@
+import CustomLink from "@/components/ui/Link";
 
 
 export default function PolitiqueConfidentialitePage() {
@@ -8,7 +9,7 @@ export default function PolitiqueConfidentialitePage() {
           Politique de confidentialité
         </h1>
         <p className="text-sm text-neutral-500">
-          Dernière mise à jour : 15/09/2026
+          Dernière mise à jour : 11/11/2026
         </p>
       </section>
 
@@ -19,11 +20,14 @@ export default function PolitiqueConfidentialitePage() {
         </p>
         <p>
           SIRET : 10928835700014<br />
-          Email : wailly.mylowann@hotmail.com<br />
+          Email : <CustomLink href="mailto:wailly.mylowann@hotmail.com" subject="Contact&nbsp;Confidentialité" cc="wailly.mylowann@hotmail.com">wailly.mylowann@hotmail.com</CustomLink><br />
           Téléphone : 06 52 82 52 39
         </p>
         <p>
-          Le site est hébergé par : Wyloz Buisness, wailly-mylowann.fr.
+          Le site est hébergé par : Wyloz Buisness, 
+          <CustomLink href="https://wailly-mylowann.fr">
+            wailly-mylowann.fr
+          </CustomLink>.
         </p>
       </section>
 
@@ -81,7 +85,7 @@ export default function PolitiqueConfidentialitePage() {
           <li>Droit de retirer votre consentement à tout moment</li>
         </ul>
         <p>
-          Pour exercer ces droits, vous pouvez contacter : <strong>wailly.mylowann@hotmail.com</strong>.
+          Pour exercer ces droits, vous pouvez contacter : <CustomLink href="mailto:wailly.mylowann@hotmail.com" subject="Contact&nbsp;Droit&nbsp;RGPD" cc="wailly.mylowann@hotmail.com">wailly.mylowann@hotmail.com</CustomLink>.
         </p>
         <p>
           Vous disposez également du droit d’introduire une réclamation auprès de la CNIL

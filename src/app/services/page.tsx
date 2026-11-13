@@ -4,8 +4,9 @@ import { services } from "@/data/services";
 import Typography from '@/components/ui/Typography';
 
 export const metadata = {
-  title: "Nos Services - PM Rénovation",
-  description: "Découvrez tous nos services de rénovation générale",
+  title: "Services & Expertise | Wyloz Buisness",
+  description: "Services professionnels en développement Web, IoT et support informatique par Wyloz Buisness.",
+  keywords: ["Wailly Mylowann", "Mylowann Wailly", "Wyloz", "Développeur Web Aude", "Developpeur Montagne Noir", "services informatique", "Smart Home"],
 };
 
 export default function ServicesPage() {
@@ -17,7 +18,7 @@ export default function ServicesPage() {
           Je propose une gamme complète de services pour tous vos
           besoins en Informatique.
         </Typography>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />

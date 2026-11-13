@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import VisitCard from "@/components/animations/AnimatedCard";
-import Link from "next/link";
+import CustomLink from "@/components/ui/Link";
 import Typography from "@/components/ui/Typography";
 import { motion } from 'framer-motion';
 
@@ -43,9 +43,9 @@ export default function VisitCardPage() {
                                 Entrepreneur & Développeur Web
                             </Typography>
                             <Typography className="text-gray-600">
-                                <Link href="mailto:portfolio@wailly-mylowann.fr" className="text-accent-500 hover:underline">
+                                <CustomLink href="mailto:portfolio@wailly-mylowann.fr">
                                     portfolio@wailly-mylowann.fr
-                                </Link>
+                                </CustomLink>
                             </Typography>
                         </div>
                     </VisitCard>

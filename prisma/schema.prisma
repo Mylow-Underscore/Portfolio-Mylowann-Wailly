@@ -3,27 +3,48 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider     = "mysql"
+  relationMode = "prisma"
 }
 
-model Devis {
-  id          Int   @id @default(autoincrement())
-  fullname    String
-  email       String
-  phone       String
-  service     String
-  message     String
-  budget      Int
-  createdAt   DateTime @default(now())
+model Fiche_Client {
+  id             Int    @id @default(autoincrement())
+  nom_Prenom     String @map("Nom / Prenom")
+  code_Reference String @unique @map("Code Référence")
+  mot_de_passe   String @map("Mot de passe")
+
+  raison_Sociale String? @map("Raison sociale")
+  siret          String? @map("Siret")
+  tel            String? @map("Tel")
+  email          String? @map("Email")
+
+  createdAt DateTime @default(now()) @map("Created At")
 }
 
-model Contact {
-  id          Int   @id @default(autoincrement())
-  name        String
-  email       String
-  sujet       String
-  phone       String
-  service     String
-  message     String
-  createdAt   DateTime @default(now())
+model Fiche_Projet {
+  id             Int    @id @default(autoincrement())
+  nom_Projet     String @map("Nom du projet")
+  code_Reference String @unique @map("Code Référence")
+  mot_de_passe   String @map("Mot de passe")
+
+  description String?   @map("Description")
+  date_Debut  DateTime? @map("Date de début")
+  date_Fin    DateTime? @map("Date de fin")
+  budget      Float?    @map("Budget")
+  statut      String?   @map("Statut")
+
+  createdAt DateTime @default(now()) @map("Created At")
+}
+
+model Facture {
+  id             Int    @id @default(autoincrement())
+  code_Reference String @unique @map("Code Référence")
+
+  montant        Float?    @map("Montant")
+  motif          String?   @map("Motif")
+  raison_Sociale String?   @map("Raison sociale")
+  date_Facture   DateTime? @map("Date de facture")
+  statut         String?   @map("Statut")
+
+  createdAt DateTime @default(now()) @map("Created At")
 }

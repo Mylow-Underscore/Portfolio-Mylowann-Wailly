@@ -1,4 +1,4 @@
-import Link from "next/link";
+import CustomLink from "@/components/ui/Link";
 
 export default function NotFoundPage() {
   return (
@@ -16,12 +16,11 @@ export default function NotFoundPage() {
         Retourne à l’accueil pour continuer ta visite.
       </p>
 
-      <Link
+      <CustomLink
         href="/"
-        className="mt-8 inline-flex items-center gap-2 rounded-full border border-neutral-700 bg-neutral-900 px-6 py-2 text-sm font-medium text-neutral-100 hover:bg-neutral-800 hover:border-neutral-500 transition-colors"
       >
         ⬅ Retour à l&apos;accueil
-      </Link>
+      </CustomLink>
     </main>
   );
 }

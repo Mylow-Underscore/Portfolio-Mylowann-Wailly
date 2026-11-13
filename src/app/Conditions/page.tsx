@@ -6,7 +6,7 @@ export default function ConditionsUtilisationPage() {
           Conditions générales d’utilisation
         </h1>
         <p className="text-sm text-neutral-500">
-          Dernière mise à jour : 28/02/2026
+          Dernière mise à jour : 11/11/2026
         </p>
       </section>
 
