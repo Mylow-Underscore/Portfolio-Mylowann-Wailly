@@ -9,7 +9,6 @@ COPY package*.json ./
 
 # Installer les dépendances (prod uniquement en production)
 RUN npm ci --omit=dev --force
-RUN npm i baseline-browser-mapping@latest -D
 
 # Copier le reste du code
 COPY . .
