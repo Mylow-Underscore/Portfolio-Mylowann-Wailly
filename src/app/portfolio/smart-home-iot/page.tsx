@@ -7,9 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function SmartHomeIoTPage() {
-  return (
-    <main>
-      {/* Content to be updated */}
-    </main>
-  )
+  return <main>{/* Content to be updated */}</main>
 }

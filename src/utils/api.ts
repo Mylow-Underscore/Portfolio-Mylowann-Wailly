@@ -17,19 +17,19 @@ const apiClient: AxiosInstance = axios.create({
 
 // Request interceptor - add auth token
 apiClient.interceptors.request.use(
-  config => {
+  (config) => {
     const token = localStorage.getItem('auth_token')
     if (token) {
       config.headers.Authorization = `Bearer ${token}`
     }
     return config
   },
-  error => Promise.reject(error)
+  (error) => Promise.reject(error)
 )
 
 // Response interceptor - handle errors
 apiClient.interceptors.response.use(
-  response => response,
+  (response) => response,
   (error: AxiosError<ApiErrorResponse>) => {
     if (error.response?.status === 401) {
       // Clear auth and redirect

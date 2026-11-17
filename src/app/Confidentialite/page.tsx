@@ -1,16 +1,11 @@
-import CustomLink from "@/components/ui/Link";
-
+import CustomLink from '@/components/ui/Link'
 
 export default function PolitiqueConfidentialitePage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12 space-y-8">
+    <main className="mx-auto max-w-4xl space-y-8 px-4 py-12">
       <section>
-        <h1 className="text-3xl font-bold mb-2">
-          Politique de confidentialité
-        </h1>
-        <p className="text-sm text-neutral-500">
-          Dernière mise à jour : 11/11/2026
-        </p>
+        <h1 className="mb-2 text-3xl font-bold">Politique de confidentialité</h1>
+        <p className="text-sm text-neutral-500">Dernière mise à jour : 11/11/2026</p>
       </section>
 
       <section className="space-y-3">
@@ -19,27 +14,34 @@ export default function PolitiqueConfidentialitePage() {
           Le présent site est édité par : <strong>Wyloz Buisness</strong>, SASU.
         </p>
         <p>
-          SIRET : 10928835700014<br />
-          Email : <CustomLink href="mailto:wailly.mylowann@hotmail.com" subject="Contact&nbsp;Confidentialité" cc="wailly.mylowann@hotmail.com">wailly.mylowann@hotmail.com</CustomLink><br />
+          SIRET : 10928835700014
+          <br />
+          Email :{' '}
+          <CustomLink
+            href="mailto:wailly.mylowann@hotmail.com"
+            subject="Contact&nbsp;Confidentialité"
+            cc="wailly.mylowann@hotmail.com"
+          >
+            wailly.mylowann@hotmail.com
+          </CustomLink>
+          <br />
           Téléphone : 06 52 82 52 39
         </p>
         <p>
-          Le site est hébergé par : Wyloz Buisness, 
-          <CustomLink href="https://wailly-mylowann.fr">
-            wailly-mylowann.fr
-          </CustomLink>.
+          Le site est hébergé par : Wyloz Buisness,
+          <CustomLink href="https://wailly-mylowann.fr">wailly-mylowann.fr</CustomLink>.
         </p>
       </section>
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">2. Données personnelles collectées</h2>
         <p>
-          Lors de l’utilisation du formulaire de contact, certaines données peuvent être collectées :
-          nom, prénom, adresse e-mail, numéro de téléphone, sujet et contenu du message.
+          Lors de l’utilisation du formulaire de contact, certaines données peuvent être collectées
+          : nom, prénom, adresse e-mail, numéro de téléphone, sujet et contenu du message.
         </p>
         <p>
-          Ces informations sont utilisées uniquement pour répondre à vos demandes, établir un premier
-          contact et, le cas échéant, préparer une proposition commerciale.
+          Ces informations sont utilisées uniquement pour répondre à vos demandes, établir un
+          premier contact et, le cas échéant, préparer une proposition commerciale.
         </p>
       </section>
 
@@ -47,8 +49,8 @@ export default function PolitiqueConfidentialitePage() {
         <h2 className="text-xl font-semibold">3. Finalités et base légale</h2>
         <p>
           La base légale du traitement repose sur votre consentement et/ou l’exécution de mesures
-          précontractuelles à votre demande, conformément au Règlement Général sur la Protection
-          des Données (RGPD) et à la loi « Informatique et Libertés ».
+          précontractuelles à votre demande, conformément au Règlement Général sur la Protection des
+          Données (RGPD) et à la loi « Informatique et Libertés ».
         </p>
         <p>
           Les données sont conservées pendant la durée nécessaire au traitement de votre demande,
@@ -59,9 +61,7 @@ export default function PolitiqueConfidentialitePage() {
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">4. Destinataires des données</h2>
-        <p>
-          Vos données ne sont ni revendues ni cédées à des tiers.
-        </p>
+        <p>Vos données ne sont ni revendues ni cédées à des tiers.</p>
         <p>
           Elles peuvent être transmises uniquement à des prestataires techniques indispensables au
           fonctionnement du site (hébergeur, outils d’e-mailing, etc.), soumis à une obligation de
@@ -75,7 +75,7 @@ export default function PolitiqueConfidentialitePage() {
           Conformément à la réglementation en vigueur, vous disposez des droits suivants sur vos
           données personnelles :
         </p>
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-inside list-disc space-y-1">
           <li>Droit d’accès</li>
           <li>Droit de rectification</li>
           <li>Droit à l’effacement</li>
@@ -85,7 +85,15 @@ export default function PolitiqueConfidentialitePage() {
           <li>Droit de retirer votre consentement à tout moment</li>
         </ul>
         <p>
-          Pour exercer ces droits, vous pouvez contacter : <CustomLink href="mailto:wailly.mylowann@hotmail.com" subject="Contact&nbsp;Droit&nbsp;RGPD" cc="wailly.mylowann@hotmail.com">wailly.mylowann@hotmail.com</CustomLink>.
+          Pour exercer ces droits, vous pouvez contacter :{' '}
+          <CustomLink
+            href="mailto:wailly.mylowann@hotmail.com"
+            subject="Contact&nbsp;Droit&nbsp;RGPD"
+            cc="wailly.mylowann@hotmail.com"
+          >
+            wailly.mylowann@hotmail.com
+          </CustomLink>
+          .
         </p>
         <p>
           Vous disposez également du droit d’introduire une réclamation auprès de la CNIL
@@ -124,7 +132,9 @@ export default function PolitiqueConfidentialitePage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold">8. Modification de la politique de confidentialité</h2>
+        <h2 className="text-xl font-semibold">
+          8. Modification de la politique de confidentialité
+        </h2>
         <p>
           L’éditeur se réserve le droit de modifier la présente politique de confidentialité à tout
           moment, notamment pour tenir compte de l’évolution du site ou de la réglementation
@@ -136,5 +146,5 @@ export default function PolitiqueConfidentialitePage() {
         </p>
       </section>
     </main>
-  );
+  )
 }

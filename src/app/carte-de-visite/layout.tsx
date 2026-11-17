@@ -6,10 +6,6 @@ export const metadata: Metadata = {
   keywords: ['Wailly Mylowann', 'Mylowann Wailly', 'Wyloz', 'carte de visite', 'developpeur web'],
 }
 
-export default function VisitCardLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function VisitCardLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }

@@ -1,22 +1,22 @@
-import { NextResponse } from "next/server";
-import { getSession } from "@/lib/session";
-import { prisma } from "@/lib/prisma";
+import { NextResponse } from 'next/server'
+import { getSession } from '@/lib/session'
+import { prisma } from '@/lib/prisma'
 
 export async function GET() {
   try {
-    const session = await getSession();
+    const session = await getSession()
 
     if (!session.isLoggedIn || !session.clientId) {
-      return NextResponse.json({ error: "Non connecté" }, { status: 401 });
+      return NextResponse.json({ error: 'Non connecté' }, { status: 401 })
     }
 
     const client = await prisma.fiche_Client.findUnique({
       where: { id: session.clientId },
-    });
+    })
 
     if (!client) {
-      session.destroy();
-      return NextResponse.json({ error: "Client introuvable" }, { status: 404 });
+      session.destroy()
+      return NextResponse.json({ error: 'Client introuvable' }, { status: 404 })
     }
 
     return NextResponse.json({
@@ -32,9 +32,9 @@ export async function GET() {
         createdAt: client.createdAt,
       },
       isAdmin: session.isAdmin ?? false,
-    });
+    })
   } catch (error) {
-    console.error("Me error:", error);
-    return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
+    console.error('Me error:', error)
+    return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 })
   }
 }

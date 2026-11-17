@@ -1,47 +1,47 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
-import Card from '@/components/ui/Card';
-import { Select } from '@/components/ui/Select';
+import { useState } from 'react'
+import Button from '@/components/ui/Button'
+import Input from '@/components/ui/Input'
+import Card from '@/components/ui/Card'
+import { Select } from '@/components/ui/Select'
 
-type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<SubmitStatus>('idle');
-  const [message, setMessage] = useState<string>('');
+  const [status, setStatus] = useState<SubmitStatus>('idle')
+  const [message, setMessage] = useState<string>('')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+    e.preventDefault()
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
 
-    setStatus('loading');
-    setMessage('Envoi en cours...');
+    setStatus('loading')
+    setMessage('Envoi en cours...')
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
-      });
+      })
 
-      const result = await res.json().catch(() => null);
+      const result = await res.json().catch(() => null)
 
       if (!res.ok) {
-        setStatus('error');
-        setMessage(result?.error || "Erreur lors de l'envoi.");
-        return;
+        setStatus('error')
+        setMessage(result?.error || "Erreur lors de l'envoi.")
+        return
       }
 
-      setStatus('success');
-      setMessage('Message envoyé ✅');
-      form.reset();
+      setStatus('success')
+      setMessage('Message envoyé ✅')
+      form.reset()
     } catch {
-      setStatus('error');
-      setMessage('Erreur réseau ou serveur.');
+      setStatus('error')
+      setMessage('Erreur réseau ou serveur.')
     }
   }
 
@@ -59,20 +59,17 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label
-            htmlFor="service"
-            className="mb-2 block text-sm font-medium text-primary-500"
-          >
-            Service intéressé
+          <label htmlFor="service" className="text-primary-500 mb-2 block text-sm font-medium">
+            Motif de Contact
           </label>
 
           <Select
             name="service"
-            className="w-full rounded-lg border-2 border-neutral-light bg-primary px-4 py-2 focus:border-accent-500"
+            className="border-neutral-light bg-primary focus:border-accent-500 w-full rounded-lg border-2 px-4 py-2"
             options={[
-              { value: '', label: 'Sélectionnez un service' },
-              { value: 'web-dev', label: 'Développement Web' },
-              { value: 'iot', label: 'IoT & Automatisation' },
+              { value: 'devis', label: 'Devis Complet' },
+              { value: 'web-dev', label: 'Site Web' },
+              { value: 'iot', label: 'Devis IoT & Automatisation' },
               { value: 'informatique', label: 'Support Informatique' },
               { value: 'montage-pc', label: 'Montage PC' },
             ]}
@@ -81,7 +78,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-primary-500" htmlFor="message">
+          <label className="text-primary-500 mb-2 block text-sm font-medium" htmlFor="message">
             Message
           </label>
           <textarea
@@ -89,7 +86,7 @@ export default function ContactForm() {
             name="message"
             rows={5}
             required
-            className="w-full rounded-lg border-2 border-neutral-light px-4 py-2 focus:border-accent-500 focus:outline-none"
+            className="border-neutral-light focus:border-accent-500 w-full rounded-lg border-2 px-4 py-2 focus:outline-none"
             placeholder="Votre message..."
           />
         </div>
@@ -111,8 +108,8 @@ export default function ContactForm() {
             status === 'success'
               ? 'text-green-500'
               : status === 'error'
-              ? 'text-red-500'
-              : 'text-primary-500'
+                ? 'text-red-500'
+                : 'text-primary-500'
           }`}
           aria-live="polite"
         >
@@ -120,5 +117,5 @@ export default function ContactForm() {
         </p>
       )}
     </Card>
-  );
+  )
 }

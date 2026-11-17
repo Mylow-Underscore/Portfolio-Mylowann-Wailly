@@ -17,7 +17,7 @@ export default function FadeInSection({
   delay = 0,
   className = '',
   direction = 'up',
-  duration = 0.6,
+  duration = 0.8,
 }: FadeInSectionProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
@@ -33,7 +33,9 @@ export default function FadeInSection({
     <motion.div
       ref={ref}
       initial={{ opacity: 0, ...directionVariants[direction] }}
-      animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...directionVariants[direction] }}
+      animate={
+        isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...directionVariants[direction] }
+      }
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >

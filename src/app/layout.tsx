@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import Typography from "@/components/ui/Typography";
+import Typography from '@/components/ui/Typography'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import '@/styles/globals.css'
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     'Mylow',
     'Wyloz',
     'Wyloz Buisness',
+    'Developpeur Web',
     'Developpeur Web Aude',
     'Developpeur Montagne Noir',
     'wailly-mylowann.fr',
@@ -42,6 +43,24 @@ export const metadata: Metadata = {
     'React',
     'Next.js',
     'TypeScript',
+    'SEO',
+    'Referencement',
+    'UI',
+    'UX',
+    'UI/UX',
+    'portfolio',
+    'projets',
+    'montage PC',
+    'PC gamer',
+    'PC sur mesure',
+    'services informatique',
+    'Smart Home',
+    'domotique',
+    'confidentialité',
+    'RGPD',
+    'CGU',
+    'conditions générales',
+    
   ],
   authors: [{ name: 'Mylowann Wailly' }],
   creator: 'Mylowann Wailly',
@@ -73,7 +92,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable}`} data-scroll-behavior="smooth">
+    <html
+      lang="fr"
+      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -82,11 +105,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="bg-secondary-400 text-primary-500 font-sans">
-          <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
-          <Footer />
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   )

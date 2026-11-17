@@ -30,7 +30,7 @@ export default function AnimatedText({
             delay: delay + index * stagger,
             ease: 'easeOut',
           }}
-          className="inline-block mr-2"
+          className="mr-2 inline-block"
         >
           {word}
         </motion.span>

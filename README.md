@@ -7,6 +7,7 @@
 ## 🎯 Caractéristiques Principales
 
 ### 🌟 Frontend
+
 - ✅ **Design Luxury Modern** - Palette noire, or et blanc cassé
 - ✅ **Animations fluides** - Framer Motion pour scroll reveals & transitions
 - ✅ **Responsive complet** - Mobile-first, adapté desktop
@@ -16,6 +17,7 @@
 - ✅ **Formulaire Contact** - Validation côté client/serveur
 
 ### 🔐 Authentification & Sécurité
+
 - ✅ **NextAuth.js** - Sessions JWT sécurisées
 - ✅ **Bcrypt** - Hashage sécurisé des mots de passe
 - ✅ **Protected Routes** - Middleware d'authentification
@@ -23,6 +25,7 @@
 - ✅ **Réinitialisation mot de passe** - Par email
 
 ### 📊 Dashboard Client
+
 - ✅ **Vue d'ensemble** - Statistiques personnelles
 - ✅ **Gestion Projets** - Liste des projets assignés
 - ✅ **Support Tickets** - Création et suivi en temps réel
@@ -30,6 +33,7 @@
 - ✅ **Paramètres** - Profil et préférences
 
 ### 🛠️ Admin Panel
+
 - ✅ **Gestion Utilisateurs** - CRUD complet
 - ✅ **Gestion Portfolio** - Ajouter/éditer/supprimer projets
 - ✅ **Gestion Tickets** - Assignation et résolution
@@ -37,6 +41,7 @@
 - ✅ **CMS** - Gestion du contenu
 
 ### 💾 Base de Données
+
 - ✅ **PostgreSQL** + Prisma ORM
 - ✅ **Schéma complet** - Users, Projects, Tickets, Invoices, etc.
 - ✅ **Migrations** - Versionnage des changements
@@ -47,6 +52,7 @@
 ## 🚀 Démarrage Rapide
 
 ### Prérequis
+
 - Node.js 20+
 - PostgreSQL 14+
 - npm ou yarn
@@ -54,23 +60,27 @@
 ### Installation
 
 **1. Cloner le projet**
+
 ```bash
 git clone <your-repo-url>
 cd portfolio-dev
 ```
 
 **2. Installer les dépendances**
+
 ```bash
 npm install
 ```
 
 **3. Configurer les variables d'environnement**
+
 ```bash
 cp .env.example .env.local
 # Éditer .env.local avec vos paramètres
 ```
 
 **4. Initialiser la base de données**
+
 ```bash
 # Créer la BD et exécuter les migrations
 npx prisma migrate dev --name init
@@ -80,6 +90,7 @@ npx prisma studio
 ```
 
 **5. Lancer le serveur de développement**
+
 ```bash
 npm run dev
 ```
@@ -126,14 +137,14 @@ public/                   # Assets statiques
 
 ### Palette Couleurs
 
-| Usage | Couleur | Code |
-|-------|---------|------|
-| Primaire | Noir Charbon | `#1a1a1a` |
-| Secondaire | Blanc Cassé | `#f5f5f0` |
-| Accent | Or Classique | `#d4af37` |
-| Succès | Vert | `#10b981` |
-| Erreur | Rouge | `#ef4444` |
-| Alerte | Orange | `#f59e0b` |
+| Usage      | Couleur      | Code      |
+| ---------- | ------------ | --------- |
+| Primaire   | Noir Charbon | `#1a1a1a` |
+| Secondaire | Blanc Cassé  | `#f5f5f0` |
+| Accent     | Or Classique | `#d4af37` |
+| Succès     | Vert         | `#10b981` |
+| Erreur     | Rouge        | `#ef4444` |
+| Alerte     | Orange       | `#f59e0b` |
 
 ### Typography
 
@@ -154,12 +165,14 @@ public/                   # Assets statiques
 ## 🔌 API Routes
 
 ### Authentification
+
 - `POST /api/auth/login` - Connexion
 - `POST /api/auth/register` - Inscription
 - `POST /api/auth/logout` - Déconnexion
 - `POST /api/auth/forgot-password` - Réinitialisation
 
 ### Projets
+
 - `GET /api/projects` - Récupérer tous les projets
 - `GET /api/projects/[id]` - Détail d'un projet
 - `POST /api/projects` - Créer un projet (admin)
@@ -167,6 +180,7 @@ public/                   # Assets statiques
 - `DELETE /api/projects/[id]` - Supprimer un projet (admin)
 
 ### Tickets Support
+
 - `GET /api/tickets` - Récupérer mes tickets
 - `GET /api/tickets/[id]` - Détail du ticket
 - `POST /api/tickets` - Créer un ticket
@@ -174,6 +188,7 @@ public/                   # Assets statiques
 - `POST /api/tickets/[id]/responses` - Ajouter une réponse
 
 ### Contact
+
 - `POST /api/contact` - Envoyer un message de contact
 
 ---
@@ -181,6 +196,7 @@ public/                   # Assets statiques
 ## 🛣️ Pages Disponibles
 
 ### Publiques
+
 - `/` - Accueil
 - `/portfolio` - Galerie complète
 - `/portfolio/[slug]` - Détail du projet
@@ -191,11 +207,13 @@ public/                   # Assets statiques
 - `/contact` - Formulaire de contact
 
 ### Authentification
+
 - `/login` - Connexion
 - `/register` - Inscription
 - `/forgot-password` - Réinitialisation
 
 ### Privées (Client)
+
 - `/dashboard` - Vue d'ensemble
 - `/dashboard/projects` - Mes projets
 - `/dashboard/tickets` - Support tickets
@@ -203,6 +221,7 @@ public/                   # Assets statiques
 - `/dashboard/settings` - Paramètres
 
 ### Admin
+
 - `/admin/dashboard` - Dashboard admin
 - `/admin/users` - Gestion utilisateurs
 - `/admin/projects` - Gestion portfolio
@@ -214,6 +233,7 @@ public/                   # Assets statiques
 ## 🔧 Configuration
 
 ### Tailwind CSS
+
 Fichier : `tailwind.config.ts`
 
 ```typescript
@@ -230,17 +250,21 @@ animation: {
 ```
 
 ### TypeScript
+
 Fichier : `tsconfig.json`
 
 Path aliases pré-configurés :
+
 - `@/*` → `src/*`
 - `@/components/*` → `src/components/*`
 - `@/types` → `src/types`
 
 ### Next.js
+
 Fichier : `next.config.ts`
 
 Configurations :
+
 - Image optimization
 - Security headers
 - Redirects & rewrites
@@ -249,18 +273,18 @@ Configurations :
 
 ## 📦 Dépendances Principales
 
-| Package | Version | Usage |
-|---------|---------|-------|
-| next | 15.0.0 | Framework web |
-| react | 19.0.0 | Librairie UI |
-| typescript | 5.x | Typage statique |
-| tailwindcss | 4.x | Styles utilitaires |
-| next-auth | 5.x | Authentification |
-| @prisma/client | 6.x | ORM Database |
-| framer-motion | 11.x | Animations |
-| react-hook-form | 7.x | Gestion formulaires |
-| zod | 3.x | Validation schémas |
-| axios | 1.x | HTTP Client |
+| Package         | Version | Usage               |
+| --------------- | ------- | ------------------- |
+| next            | 15.0.0  | Framework web       |
+| react           | 19.0.0  | Librairie UI        |
+| typescript      | 5.x     | Typage statique     |
+| tailwindcss     | 4.x     | Styles utilitaires  |
+| next-auth       | 5.x     | Authentification    |
+| @prisma/client  | 6.x     | ORM Database        |
+| framer-motion   | 11.x    | Animations          |
+| react-hook-form | 7.x     | Gestion formulaires |
+| zod             | 3.x     | Validation schémas  |
+| axios           | 1.x     | HTTP Client         |
 
 Voir `package.json` pour la liste complète.
 
@@ -269,16 +293,19 @@ Voir `package.json` pour la liste complète.
 ## 🧪 Tests
 
 ### Tests unitaires
+
 ```bash
 npm run test
 ```
 
 ### Tests en mode watch
+
 ```bash
 npm run test:watch
 ```
 
 ### Tests E2E
+
 ```bash
 npm run test:e2e
 ```
@@ -316,6 +343,7 @@ npm run test:e2e     # Tests E2E
 ### Vercel (Recommandé)
 
 1. **Pousser le code sur GitHub**
+
 ```bash
 git push origin main
 ```
@@ -331,16 +359,19 @@ git push origin main
 ### Docker
 
 **Build l'image**
+
 ```bash
 docker build -t portfolio-dev .
 ```
 
 **Lancer le conteneur**
+
 ```bash
 docker run -p 3000:3000 portfolio-dev
 ```
 
 **Avec Docker Compose**
+
 ```bash
 docker-compose up -d
 ```
@@ -350,6 +381,7 @@ docker-compose up -d
 ## 🐛 Dépannage
 
 ### Erreur: "DATABASE_URL not found"
+
 ```bash
 # Vérifier .env.local existe et contient DATABASE_URL
 cat .env.local | grep DATABASE_URL
@@ -359,6 +391,7 @@ npm run dev
 ```
 
 ### Erreur: "Prisma error"
+
 ```bash
 # Régénérer Prisma client
 npx prisma generate
@@ -368,6 +401,7 @@ npx prisma db push
 ```
 
 ### Tailwind colors ne s'appliquent pas
+
 ```bash
 # Redémarrer le serveur dev
 npm run dev
@@ -376,6 +410,7 @@ npm run dev
 ```
 
 ### NextAuth session non disponible
+
 ```bash
 # Vérifier SessionProvider dans layout.tsx
 # Vérifier NEXTAUTH_SECRET dans .env.local
@@ -404,6 +439,7 @@ MIT License - Voir [LICENSE.md](LICENSE.md)
 ## 💬 Support
 
 Pour des questions ou problèmes :
+
 1. Vérifier la [documentation](./GETTING-STARTED.md)
 2. Consulter les issues GitHub
 3. Créer une nouvelle issue si nécessaire

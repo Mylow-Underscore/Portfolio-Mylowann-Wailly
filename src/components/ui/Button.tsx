@@ -10,8 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary-500 text-secondary-400 hover:bg-primary-600 focus:ring-accent-500',
-        secondary: 'bg-secondary-400 text-primary-500 hover:bg-secondary-500 focus:ring-primary-500',
-        outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 focus:ring-primary-500',
+        secondary:
+          'bg-secondary-400 text-primary-500 hover:bg-secondary-500 focus:ring-primary-500',
+        outline:
+          'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 focus:ring-primary-500',
         gold: 'bg-accent-500 text-primary-500 hover:bg-accent-600 focus:ring-accent-500 shadow-gold-glow',
         ghost: 'text-primary-500 hover:bg-primary-100 focus:ring-primary-500',
         danger: 'bg-status-error text-white hover:bg-red-700 focus:ring-status-error',
@@ -31,8 +33,7 @@ const buttonVariants = cva(
 )
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   isLoading?: boolean
   children: React.ReactNode
 }

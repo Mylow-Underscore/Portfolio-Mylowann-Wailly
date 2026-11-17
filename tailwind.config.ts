@@ -7,7 +7,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/assets/**/*.{mp4}'
+    './src/assets/**/*.{mp4}',
   ],
   theme: {
     extend: {
@@ -123,8 +123,8 @@ const config: Config = {
         'bounce-in': 'bounceIn 0.6s ease-out',
         'scale-in': 'scaleIn 0.4s ease-out',
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
-        'shimmer': 'shimmer 2s infinite',
-        'float': 'float 3s ease-in-out infinite',
+        shimmer: 'shimmer 2s infinite',
+        float: 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {

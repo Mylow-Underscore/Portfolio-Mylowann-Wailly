@@ -53,6 +53,6 @@ export const unslugify = (slug: string): string => {
   return slug
     .replace(/-/g, ' ')
     .split(' ')
-    .map(word => capitalize(word))
+    .map((word) => capitalize(word))
     .join(' ')
 }

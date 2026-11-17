@@ -23,11 +23,11 @@ export default function CounterAnimation({
   const [count, setCount] = useState(start)
 
   useEffect(() => {
-    let startTimestamp = Date.now()
+    const startTimestamp = Date.now()
     const animate = () => {
       const elapsed = Date.now() - startTimestamp
       const progress = Math.min(elapsed / (duration * 1000), 1)
-      
+
       setCount(Math.floor(start + (end - start) * progress))
 
       if (progress < 1) {

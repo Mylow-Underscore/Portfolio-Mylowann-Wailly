@@ -1,33 +1,33 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getSession } from "@/lib/session";
-import { prisma } from "@/lib/prisma";
+import { NextRequest, NextResponse } from 'next/server'
+import { getSession } from '@/lib/session'
+import { prisma } from '@/lib/prisma'
 
-const DEFAULT_LIMIT = 20;
-const MAX_LIMIT = 50;
+const DEFAULT_LIMIT = 20
+const MAX_LIMIT = 50
 
 function parseLimit(value: string | null): number {
-  if (!value || !/^\d+$/.test(value)) return DEFAULT_LIMIT;
+  if (!value || !/^\d+$/.test(value)) return DEFAULT_LIMIT
 
-  return Math.min(Math.max(Number(value), 1), MAX_LIMIT);
+  return Math.min(Math.max(Number(value), 1), MAX_LIMIT)
 }
 
 /** Recherche des clients par nom, code de référence, e-mail, téléphone ou identifiant. */
 export async function GET(req: NextRequest) {
   try {
-    const session = await getSession();
+    const session = await getSession()
     if (!session.isLoggedIn || (!session.isAdmin && !session.isCompta)) {
-      return NextResponse.json({ error: "Accès refusé." }, { status: 403 });
+      return NextResponse.json({ error: 'Accès refusé.' }, { status: 403 })
     }
 
-    const query = req.nextUrl.searchParams.get("q")?.trim() ?? "";
+    const query = req.nextUrl.searchParams.get('q')?.trim() ?? ''
     if (query.length < 2) {
       return NextResponse.json(
-        { error: "Saisissez au moins 2 caractères pour rechercher un client." },
+        { error: 'Saisissez au moins 2 caractères pour rechercher un client.' },
         { status: 400 }
-      );
+      )
     }
 
-    const clientId = /^\d+$/.test(query) ? Number(query) : undefined;
+    const clientId = /^\d+$/.test(query) ? Number(query) : undefined
     const clients = await prisma.fiche_Client.findMany({
       where: {
         OR: [
@@ -38,11 +38,10 @@ export async function GET(req: NextRequest) {
           ...(clientId && Number.isSafeInteger(clientId) ? [{ id: clientId }] : []),
         ],
       },
-      orderBy: { nom_Prenom: "asc" },
-      take: parseLimit(req.nextUrl.searchParams.get("limit")),
-    });
+      orderBy: { nom_Prenom: 'asc' },
+      take: parseLimit(req.nextUrl.searchParams.get('limit')),
+    })
 
-    
     return NextResponse.json({
       query,
       clients: clients.map((client) => ({
@@ -56,9 +55,9 @@ export async function GET(req: NextRequest) {
         nomPrenom: client.nom_Prenom,
         createdAt: client.createdAt,
       })),
-    });
+    })
   } catch (error) {
-    console.error("[RECHERCHE CLIENTS] Erreur :", error);
-    return NextResponse.json({ error: "Erreur serveur." }, { status: 500 });
+    console.error('[RECHERCHE CLIENTS] Erreur :', error)
+    return NextResponse.json({ error: 'Erreur serveur.' }, { status: 500 })
   }
 }

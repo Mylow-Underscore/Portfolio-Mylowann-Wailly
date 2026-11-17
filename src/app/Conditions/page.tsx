@@ -1,13 +1,9 @@
 export default function ConditionsUtilisationPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12 space-y-8">
+    <main className="mx-auto max-w-4xl space-y-8 px-4 py-12">
       <section>
-        <h1 className="text-3xl font-bold mb-2">
-          Conditions générales d’utilisation
-        </h1>
-        <p className="text-sm text-neutral-500">
-          Dernière mise à jour : 11/11/2026
-        </p>
+        <h1 className="mb-2 text-3xl font-bold">Conditions générales d’utilisation</h1>
+        <p className="text-sm text-neutral-500">Dernière mise à jour : 11/11/2026</p>
       </section>
 
       <section className="space-y-3">
@@ -42,7 +38,7 @@ export default function ConditionsUtilisationPage() {
           vigueur et des présentes CGU.
         </p>
         <p>L’utilisateur s’interdit notamment :</p>
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-inside list-disc space-y-1">
           <li>D’utiliser le site à des fins illégales, frauduleuses ou malveillantes.</li>
           <li>
             De tenter d’accéder de manière non autorisée aux systèmes d’information, comptes ou
@@ -62,9 +58,9 @@ export default function ConditionsUtilisationPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">4. Contenu du site</h2>
         <p>
-          Les informations mises à disposition sur le site le sont à titre indicatif.
-          Malgré le soin apporté à leur exactitude et leur mise à jour, l’éditeur ne peut garantir
-          que les contenus soient exempts d’erreurs, d’omissions ou d’imprécisions.
+          Les informations mises à disposition sur le site le sont à titre indicatif. Malgré le soin
+          apporté à leur exactitude et leur mise à jour, l’éditeur ne peut garantir que les contenus
+          soient exempts d’erreurs, d’omissions ou d’imprécisions.
         </p>
         <p>
           L’éditeur se réserve le droit de modifier, mettre à jour ou supprimer tout contenu, à tout
@@ -86,8 +82,8 @@ export default function ConditionsUtilisationPage() {
         </p>
         <p>
           Toute utilisation non autorisée du site ou de l’un quelconque des éléments qu’il contient
-          est susceptible d’engager la responsabilité de son auteur et de constituer une
-          contrefaçon au sens du Code de la propriété intellectuelle.
+          est susceptible d’engager la responsabilité de son auteur et de constituer une contrefaçon
+          au sens du Code de la propriété intellectuelle.
         </p>
       </section>
 
@@ -108,8 +104,8 @@ export default function ConditionsUtilisationPage() {
         <h2 className="text-xl font-semibold">7. Responsabilité</h2>
         <p>
           L’éditeur ne peut être tenu responsable des dommages directs ou indirects résultant de
-          l’utilisation du site, de l’impossibilité d’y accéder, ou de l’utilisation des informations
-          qui y sont publiées.
+          l’utilisation du site, de l’impossibilité d’y accéder, ou de l’utilisation des
+          informations qui y sont publiées.
         </p>
         <p>
           L’utilisateur est seul responsable de la manière dont il utilise le site et les
@@ -132,11 +128,11 @@ export default function ConditionsUtilisationPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">9. Droit applicable et juridiction compétente</h2>
         <p>
-          Les présentes CGU sont soumises au droit français.
-          En cas de litige et à défaut de résolution amiable, les tribunaux français compétents
-          seront seuls compétents pour en connaître.
+          Les présentes CGU sont soumises au droit français. En cas de litige et à défaut de
+          résolution amiable, les tribunaux français compétents seront seuls compétents pour en
+          connaître.
         </p>
       </section>
     </main>
-  );
+  )
 }

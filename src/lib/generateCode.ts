@@ -1,30 +1,29 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from '@/lib/prisma'
 
 export async function generateClientCode(nom: string, prenom: string): Promise<string> {
-  
-  const letterNom = nom.trim()[0].toUpperCase();
-  const letterPrenom = prenom.trim()[0].toUpperCase();
-  const prefix = `${letterNom}${letterPrenom}`;
+  const letterNom = nom.trim()[0].toUpperCase()
+  const letterPrenom = prenom.trim()[0].toUpperCase()
+  const prefix = `${letterNom}${letterPrenom}`
 
   const lastCodeResult = await prisma.fiche_Client.findFirst({
     where: { code_Reference: { startsWith: prefix } },
-    orderBy: { code_Reference: "desc" }
-  });
+    orderBy: { code_Reference: 'desc' },
+  })
 
-  let nextNum = "100".padStart(3, '0');
+  let nextNum = '100'.padStart(3, '0')
 
   if (lastCodeResult?.code_Reference) {
-    const numMatch = lastCodeResult.code_Reference.match(/\d+$/)?.[0];
-    
+    const numMatch = lastCodeResult.code_Reference.match(/\d+$/)?.[0]
+
     if (!numMatch || isNaN(parseInt(numMatch, 10))) {
-      throw new Error(`Expected numeric suffix after "${prefix}" in reference codes`);
+      throw new Error(`Expected numeric suffix after "${prefix}" in reference codes`)
     }
-    
-    const lastNumber = parseInt(lastCodeResult.code_Reference.replace(prefix, ""), 10);
-    nextNum = (lastNumber + 1).toString().padStart(3, '0');
+
+    const lastNumber = parseInt(lastCodeResult.code_Reference.replace(prefix, ''), 10)
+    nextNum = (lastNumber + 1).toString().padStart(3, '0')
   } else {
-    nextNum = "1".padStart(3, '0');
+    nextNum = '1'.padStart(3, '0')
   }
 
-  return `${prefix}${nextNum}`;
+  return `${prefix}${nextNum}`
 }

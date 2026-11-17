@@ -1,20 +1,19 @@
-'use client';
-import React, { useState, useRef, useCallback, ReactNode, CSSProperties } from 'react';
+'use client'
+import React, { useState, useRef, useCallback, ReactNode, CSSProperties } from 'react'
 
 interface AnimatedCardProps {
-  children: ReactNode;
-  className?: string;
-  maxRotation?: number;
-  glowOpacity?: number;
-  shadowBlur?: number;
-  parallaxOffset?: number;
-  transitionDuration?: string;
-  backgroundImage?: string | null;
-  enableGlow?: boolean;
-  enableShadow?: boolean;
-  enableParallax?: boolean;
+  children: ReactNode
+  className?: string
+  maxRotation?: number
+  glowOpacity?: number
+  shadowBlur?: number
+  parallaxOffset?: number
+  transitionDuration?: string
+  backgroundImage?: string | null
+  enableGlow?: boolean
+  enableShadow?: boolean
+  enableParallax?: boolean
 }
-
 
 function AnimatedCard({
   children,
@@ -29,7 +28,7 @@ function AnimatedCard({
   enableShadow = true,
   enableParallax = true,
 }: AnimatedCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null)
 
   const [transform, setTransform] = useState({
     rotateX: 0,
@@ -39,25 +38,25 @@ function AnimatedCard({
     shadowX: 0,
     shadowY: 20,
     isHovered: false,
-  });
+  })
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!cardRef.current) return;
+      if (!cardRef.current) return
 
-      const rect = cardRef.current.getBoundingClientRect();
-      const { width, height, left, top } = rect;
+      const rect = cardRef.current.getBoundingClientRect()
+      const { width, height, left, top } = rect
 
-      const mouseX = e.clientX - left;
-      const mouseY = e.clientY - top;
+      const mouseX = e.clientX - left
+      const mouseY = e.clientY - top
 
-      const xPct = mouseX / width - 0.8;
-      const yPct = mouseY / height - 0.8;
+      const xPct = mouseX / width - 0.8
+      const yPct = mouseY / height - 0.8
 
-      const newRotateX = yPct * -1 * maxRotation;
-      const newRotateY = xPct * maxRotation;
+      const newRotateX = yPct * -1 * maxRotation
+      const newRotateY = xPct * maxRotation
 
-      setTransform(prev => ({
+      setTransform((prev) => ({
         ...prev,
         rotateX: newRotateX,
         rotateY: newRotateY,
@@ -65,14 +64,14 @@ function AnimatedCard({
         glowY: (mouseY / height) * 100,
         shadowX: enableShadow ? newRotateY * 0.8 : 0,
         shadowY: enableShadow ? 20 - newRotateX * 0.6 : 20,
-      }));
+      }))
     },
     [maxRotation, enableShadow]
-  );
+  )
 
   const handleMouseEnter = useCallback(() => {
-    setTransform(prev => ({ ...prev, isHovered: true }));
-  }, []);
+    setTransform((prev) => ({ ...prev, isHovered: true }))
+  }, [])
 
   const handleMouseLeave = useCallback(() => {
     setTransform({
@@ -83,8 +82,8 @@ function AnimatedCard({
       shadowX: 0,
       shadowY: 20,
       isHovered: false,
-    });
-  }, []);
+    })
+  }, [])
 
   const cardStyle: CSSProperties = {
     transform: `perspective(1000px) rotateX(${transform.rotateX}deg) rotateY(${transform.rotateY}deg) scale3d(1, 1, 1)`,
@@ -93,7 +92,7 @@ function AnimatedCard({
       : 'none',
     transition: `transform ${transitionDuration} cubic-bezier(0.23, 1, 0.32, 1), box-shadow ${transitionDuration} cubic-bezier(0.23, 1, 0.32, 1)`,
     transformStyle: 'preserve-3d',
-  };
+  }
 
   const backgroundStyle = backgroundImage
     ? {
@@ -103,7 +102,7 @@ function AnimatedCard({
         opacity: transform.isHovered ? 1 : 0,
         transition: `opacity 0.5s ease-in-out`,
       }
-    : {};
+    : {}
 
   const glowStyle = enableGlow
     ? {
@@ -111,14 +110,14 @@ function AnimatedCard({
         opacity: transform.isHovered ? 1 : 0,
         transition: 'opacity 0.5s ease-in-out',
       }
-    : {};
+    : {}
 
   const contentStyle: CSSProperties = enableParallax
     ? {
         transform: `translateZ(${parallaxOffset}px)`,
         transformStyle: 'preserve-3d',
       }
-    : {};
+    : {}
 
   return (
     <div style={{ perspective: '1050px' }} className={className}>
@@ -128,7 +127,7 @@ function AnimatedCard({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={cardStyle}
-        className="relative bgcard-primary-500 rounded-2xl overflow-hidden"
+        className="bgcard-primary-500 relative overflow-hidden rounded-2xl"
         role="img"
         tabIndex={0}
         onFocus={handleMouseEnter}
@@ -143,13 +142,13 @@ function AnimatedCard({
         )}
 
         <div
-          className="absolute inset-0 border-2 border-white/10 rounded-2xl pointer-events-none"
+          className="pointer-events-none absolute inset-0 rounded-2xl border-2 border-white/10"
           aria-hidden="true"
         />
 
         {enableGlow && (
           <div
-            className="absolute inset-0 z-0 rounded-2xl pointer-events-none"
+            className="pointer-events-none absolute inset-0 z-0 rounded-2xl"
             style={glowStyle}
             aria-hidden="true"
           />
@@ -160,7 +159,7 @@ function AnimatedCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default AnimatedCard;
+export default AnimatedCard
