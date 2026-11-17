@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances (prod uniquement en production)
-RUN npm ci --omit=dev --force
+RUN npm ci --force
 
 # Copier le reste du code
 COPY . .
