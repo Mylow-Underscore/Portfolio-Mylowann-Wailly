@@ -39,7 +39,7 @@ export default function ApplicationMetier() {
   return (
     <section id="application-metiers" className="bg-primary-500 relative z-1 min-h-screen">
         <div className="z-10 mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 mt-10 md:grid-col-1">
+            <div className="grid min-lg:grid-cols-2 mt-10 md:grid-col-1 sm:grid-col-1">
                 <motion.div className="flex flex-col py-0.5">
                     {menuApplicationMetier.map((item) => (
                         <motion.div className="flex flex-col py-0.5" key={item.id}>                        

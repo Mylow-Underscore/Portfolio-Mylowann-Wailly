@@ -48,10 +48,7 @@ export default function Header() {
 
     Promise.all([
       fetch('/api/auth/me').then(async (r) => {
-        if (!r.ok) {
-          router.replace('/login')
-          return
-        }
+        
         const d = await r.json()
         setClient(d.client)
         setIsAdmin(d.isAdmin)
